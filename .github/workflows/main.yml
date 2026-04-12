@@ -1,0 +1,29 @@
+name: Daily Supabase Backup
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # täglich um 02:00 UTC
+  workflow_dispatch: # manuell starten möglich
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install PostgreSQL client
+        run: sudo apt-get install -y postgresql-client
+
+      - name: Create backup
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          pg_dump "$DATABASE_URL" > backup.sql
+
+      - name: Compress backup
+        run: gzip backup.sql
+
+      - name: Upload artifact (GitHub)
+        uses: actions/upload-artifact@v4
+        with:
+          name: supabase-backup
+          path: backup.sql.gz

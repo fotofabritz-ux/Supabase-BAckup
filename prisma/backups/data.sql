@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict ZhSzGbx7fVdnj9a9fL6PQDEOiFhWjgvtEXQgz1lFfjYZVclgzd7IznkMdTFyipI
+-- \restrict ipqqGS1AFdXloTg6UactO90gUJgSZCv4PtIiiUSpzSfHrazwQUmCEB0ORPze9oS
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -184,7 +184,7 @@ c61c19f2-2d89-4fc7-bffa-b96d1d672a49	9f865c2c-62c6-46c9-9b86-f4932975de50	2026-0
 01c7a4d3-90be-4180-a6df-b4c7b35ebd18	5cd5864a-3ae3-4703-8b12-39ecce40b518	2026-06-16 19:48:23.324475+00	2026-06-16 19:48:23.324475+00	\N	aal1	\N	\N	Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1	104.28.45.21	\N	\N	\N	\N	\N
 88dcf97d-b361-4fec-8263-675edc988ca3	ec4e8feb-e17b-4dc2-a861-50c93b99530e	2026-06-28 13:09:56.731625+00	2026-06-28 13:09:56.731625+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0	93.237.174.234	\N	\N	\N	\N	\N
 5ec32b58-3f13-46e7-96d9-c6ee27654b9b	ad3d14eb-2235-4943-aae9-5f73a3872c9e	2026-06-17 21:39:55.515819+00	2026-06-17 21:39:55.515819+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:152.0) Gecko/20100101 Firefox/152.0	87.177.80.243	\N	\N	\N	\N	\N
-5c37a304-9dfa-47bb-8ce7-4d421865cc62	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	2026-06-03 15:20:54.883798+00	2026-07-07 23:41:16.218631+00	\N	aal1	\N	2026-07-07 23:41:16.218536	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15	47.65.243.89	\N	\N	\N	\N	\N
+5c37a304-9dfa-47bb-8ce7-4d421865cc62	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	2026-06-03 15:20:54.883798+00	2026-07-09 11:21:08.042235+00	\N	aal1	\N	2026-07-09 11:21:08.042128	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15	47.65.243.89	\N	\N	\N	\N	\N
 \.
 
 
@@ -2812,6 +2812,10 @@ a8141eef-ee38-41b9-9cb3-bf550be835c5	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e
 d43bb3f6-81a3-4f20-b547-00e5357d8b8b	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2801	pending	2026-07-07 08:46:09.9723+00	2026-07-07 08:46:36.005484+00
 3a64fe5f-5810-48da-9e26-cb877d4cbaed	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2876	pending	2026-07-07 12:41:21.268313+00	2026-07-07 12:41:51.032566+00
 b0259f0a-e534-4cd2-b0f9-bc123844bb96	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2358	pending	2026-07-07 14:36:39.581419+00	2026-07-07 14:37:36.000912+00
+f17f0afd-4b9f-4e0b-88d2-d9061ee270b7	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2139	selected	2026-07-09 11:21:39.18848+00	2026-07-09 11:21:39.18848+00
+a7cb89aa-c412-4003-ad36-ced8792aa4ce	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2135	selected	2026-07-09 11:21:44.050426+00	2026-07-09 11:21:44.050426+00
+87902aec-934a-4ac8-823a-f92551a821a8	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2207	selected	2026-07-09 11:22:01.34333+00	2026-07-09 11:22:01.34333+00
+bee1b73a-9de2-485d-8a94-380fbbe1d226	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	2138	selected	2026-07-09 11:22:07.322445+00	2026-07-09 11:22:07.322445+00
 \.
 
 
@@ -3420,6 +3424,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_NR_seq"', 1780872102056, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict ZhSzGbx7fVdnj9a9fL6PQDEOiFhWjgvtEXQgz1lFfjYZVclgzd7IznkMdTFyipI
+-- \unrestrict ipqqGS1AFdXloTg6UactO90gUJgSZCv4PtIiiUSpzSfHrazwQUmCEB0ORPze9oS
 
 RESET ALL;

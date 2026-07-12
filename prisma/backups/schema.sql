@@ -596,6 +596,32 @@ ALTER TABLE ONLY "public"."user_events"
 
 
 
+CREATE POLICY "Admin platzdaten delete" ON "public"."platzdaten" FOR DELETE TO "authenticated" USING ((EXISTS ( SELECT 1
+   FROM "public"."profiles" "p"
+  WHERE (("p"."uid" = "auth"."uid"()) AND ("p"."role" = 'admin'::"text")))));
+
+
+
+CREATE POLICY "Admin platzdaten insert" ON "public"."platzdaten" FOR INSERT TO "authenticated" WITH CHECK ((EXISTS ( SELECT 1
+   FROM "public"."profiles" "p"
+  WHERE (("p"."uid" = "auth"."uid"()) AND ("p"."role" = 'admin'::"text")))));
+
+
+
+CREATE POLICY "Admin platzdaten select" ON "public"."platzdaten" FOR SELECT TO "authenticated" USING ((EXISTS ( SELECT 1
+   FROM "public"."profiles" "p"
+  WHERE (("p"."uid" = "auth"."uid"()) AND ("p"."role" = 'admin'::"text")))));
+
+
+
+CREATE POLICY "Admin platzdaten update" ON "public"."platzdaten" FOR UPDATE TO "authenticated" USING ((EXISTS ( SELECT 1
+   FROM "public"."profiles" "p"
+  WHERE (("p"."uid" = "auth"."uid"()) AND ("p"."role" = 'admin'::"text"))))) WITH CHECK ((EXISTS ( SELECT 1
+   FROM "public"."profiles" "p"
+  WHERE (("p"."uid" = "auth"."uid"()) AND ("p"."role" = 'admin'::"text")))));
+
+
+
 CREATE POLICY "Allow all for anon" ON "public"."platzdaten" USING (true) WITH CHECK (true);
 
 

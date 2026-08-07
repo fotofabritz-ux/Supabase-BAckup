@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict i3wzkw6XZlHiN4lt80w4dd0SUtq92WvvFMHD97BvMBpcdz18xTPr6YQrTWlMPbE
+-- \restrict oBZIqy2Gu48WAXRpn4XAD3xJN4vSPeDxa7cH8XFyjodIcVtSorPZvgMdQvnhjrK
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -83,6 +83,9 @@ c88cd47d-e80b-43c2-940d-46201176535e	\N	\N	\N	\N	google			2026-06-16 09:03:26.63
 11c780ab-4569-46fb-a4c0-17cee2507883	\N	\N	\N	\N	google			2026-06-17 11:13:13.002149+00	2026-06-17 11:13:13.002149+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 4cbb7246-d6fa-47c8-b253-a70538f7f8b6	\N	\N	\N	\N	google			2026-06-19 16:31:50.829495+00	2026-06-19 16:31:50.829495+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 ff8b21b1-faec-4620-ae35-b6e36b5b08a5	\N	\N	\N	\N	google			2026-06-19 16:32:06.770791+00	2026-06-19 16:32:06.770791+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
+f83b9945-64b3-4325-996d-1d98b4d0c617	\N	\N	\N	\N	google			2026-08-06 17:10:23.537961+00	2026-08-06 17:10:23.537961+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
+53ed158b-c23d-4634-a543-7b53268164e3	\N	\N	\N	\N	google			2026-08-06 17:10:42.589925+00	2026-08-06 17:10:42.589925+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
+63d0fdae-32e1-4f88-ad30-1894ae6f19b2	\N	\N	\N	\N	google			2026-08-06 20:31:18.751602+00	2026-08-06 20:31:18.751602+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 \.
 
 
@@ -110,9 +113,11 @@ COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_pas
 00000000-0000-0000-0000-000000000000	5cd5864a-3ae3-4703-8b12-39ecce40b518	authenticated	authenticated	sascha.heinen99@gmail.com	$2a$10$SjpxPhx7WwJJAMb78toSFefu.XJsxPzAoTZofUEWT1dAui/qdRc1y	2026-06-15 19:49:05.166422+00	\N		2026-06-15 19:48:32.381347+00		\N			\N	2026-06-16 19:48:23.324372+00	{"provider": "email", "providers": ["email"]}	{"sub": "5cd5864a-3ae3-4703-8b12-39ecce40b518", "email": "sascha.heinen99@gmail.com", "email_verified": true, "phone_verified": false}	\N	2026-06-15 19:47:08.12904+00	2026-06-16 19:48:23.37178+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	dd8c3e8c-69ce-43bb-98f5-b0ff6269826c	authenticated	authenticated	bellagio.ontour@gmail.com	$2a$10$96J3E9fvVqLM/KLHV68z6.Hi0TTkXDltS4S2nkOoXYuGEPd2NpxLa	2026-08-02 12:13:28.6693+00	\N		2026-08-02 12:12:43.170844+00		\N			\N	2026-08-02 12:16:13.718945+00	{"provider": "email", "providers": ["email"]}	{"sub": "dd8c3e8c-69ce-43bb-98f5-b0ff6269826c", "email": "bellagio.ontour@gmail.com", "email_verified": true, "phone_verified": false}	\N	2026-08-02 12:11:21.904295+00	2026-08-02 12:16:13.771051+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	10689631-5ff1-43db-8f2a-cac4140b6696	authenticated	authenticated	dannyreminder@yahoo.de	$2a$10$aed3DKEXNIHjswn2Al32ju.QUcTMzBHG6.NmK4NDa.GumRA60oYX6	2026-07-22 12:02:10.403402+00	\N		2026-07-22 12:01:49.901916+00		\N			\N	2026-07-22 12:02:10.432387+00	{"provider": "email", "providers": ["email"]}	{"sub": "10689631-5ff1-43db-8f2a-cac4140b6696", "email": "dannyreminder@yahoo.de", "email_verified": true, "phone_verified": false}	\N	2026-07-22 12:01:49.786998+00	2026-07-22 12:02:10.492604+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	b4cc4a99-3c7d-471d-95a4-b0008386f741	authenticated	authenticated	moinmoinentenangeln@gmail.com	$2a$10$J0S3tYYcgPLJvco9nbL8JeXH3VN0ANa3FZCYl3fmkO4PB0KjO1mNO	2026-08-06 17:12:04.028971+00	\N		2026-08-06 17:11:27.122852+00		\N			\N	2026-08-06 17:12:04.036234+00	{"provider": "email", "providers": ["email"]}	{"sub": "b4cc4a99-3c7d-471d-95a4-b0008386f741", "email": "moinmoinentenangeln@gmail.com", "email_verified": true, "phone_verified": false}	\N	2026-08-06 17:11:27.081319+00	2026-08-06 17:12:04.068438+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	b0e935ad-9c91-40a2-b715-d496b719ed9d	authenticated	authenticated	enders-patrik@web.de	$2a$10$o8qivgG9l.t.NfLUbS94iOkUpSevWcEq3vf8XpB6LPAzpYtaMymFe	2026-06-19 16:32:38.007019+00	\N		2026-06-19 16:32:28.282656+00		\N			\N	2026-06-19 16:32:38.013507+00	{"provider": "email", "providers": ["email"]}	{"sub": "b0e935ad-9c91-40a2-b715-d496b719ed9d", "email": "enders-patrik@web.de", "email_verified": true, "phone_verified": false}	\N	2026-06-19 16:32:28.222114+00	2026-06-19 16:32:38.052297+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	ec4e8feb-e17b-4dc2-a861-50c93b99530e	authenticated	authenticated	tournee@schaustelleranfragen.de	$2a$10$rTBKCgMV81PFwZjYqHWE6.uRnplGziHvJbwSDyE8FYXNy8fOBjDGG	2026-04-06 18:26:47.070237+00	\N		\N	37729a14a970dff9020e94ec22e11a4fafb6df6b369fcdafdd161d92	2026-06-17 21:37:47.577089+00			\N	2026-07-16 19:09:44.368683+00	{"provider": "email", "providers": ["email"]}	{"sub": "ec4e8feb-e17b-4dc2-a861-50c93b99530e", "email": "tournee@schaustelleranfragen.de", "email_verified": true, "phone_verified": false}	\N	2026-04-06 18:26:27.435482+00	2026-07-28 20:29:54.741357+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	authenticated	authenticated	office@wurst-koch.de	$2a$10$NoATmjoHOgJnSDtK9HA8geOH1f41pGnP5002QW9/P0C4oQqJI6v4m	2026-08-05 19:46:43.041439+00	\N		2026-08-05 19:46:33.435031+00		\N			\N	2026-08-05 20:31:58.887056+00	{"provider": "email", "providers": ["email"]}	{"sub": "f6d79ec2-40d8-44d8-91bf-0a2df52b87cb", "email": "office@wurst-koch.de", "email_verified": true, "phone_verified": false}	\N	2026-08-05 19:46:33.385547+00	2026-08-05 20:31:58.937912+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	8350d854-a183-4841-839f-aaa4be7d08ad	authenticated	authenticated	fabritz@circus-circus.de	$2a$10$wGVpsYxqsF.nbxTWc0MnWu5mE1yRLxL.JyaTvwIIK/9bksQscTsre	2026-08-06 21:10:34.651469+00	\N		2026-08-06 21:10:08.444954+00		\N			\N	2026-08-06 21:10:34.660833+00	{"provider": "email", "providers": ["email"]}	{"sub": "8350d854-a183-4841-839f-aaa4be7d08ad", "email": "fabritz@circus-circus.de", "email_verified": true, "phone_verified": false}	\N	2026-08-06 21:10:08.385933+00	2026-08-06 21:10:34.692166+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -143,6 +148,8 @@ b0e935ad-9c91-40a2-b715-d496b719ed9d	b0e935ad-9c91-40a2-b715-d496b719ed9d	{"sub"
 10689631-5ff1-43db-8f2a-cac4140b6696	10689631-5ff1-43db-8f2a-cac4140b6696	{"sub": "10689631-5ff1-43db-8f2a-cac4140b6696", "email": "dannyreminder@yahoo.de", "email_verified": true, "phone_verified": false}	email	2026-07-22 12:01:49.856954+00	2026-07-22 12:01:49.857005+00	2026-07-22 12:01:49.857005+00	c6cf8eaa-12d4-4b23-b94d-ed4ad4d54989
 dd8c3e8c-69ce-43bb-98f5-b0ff6269826c	dd8c3e8c-69ce-43bb-98f5-b0ff6269826c	{"sub": "dd8c3e8c-69ce-43bb-98f5-b0ff6269826c", "email": "bellagio.ontour@gmail.com", "email_verified": true, "phone_verified": false}	email	2026-08-02 12:11:21.925607+00	2026-08-02 12:11:21.925653+00	2026-08-02 12:11:21.925653+00	75fc3379-65f7-49df-8426-a1ff20c192c3
 f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	{"sub": "f6d79ec2-40d8-44d8-91bf-0a2df52b87cb", "email": "office@wurst-koch.de", "email_verified": true, "phone_verified": false}	email	2026-08-05 19:46:33.41743+00	2026-08-05 19:46:33.417897+00	2026-08-05 19:46:33.417897+00	a87e765c-ef27-4ce5-978a-b6eb9cb31124
+b4cc4a99-3c7d-471d-95a4-b0008386f741	b4cc4a99-3c7d-471d-95a4-b0008386f741	{"sub": "b4cc4a99-3c7d-471d-95a4-b0008386f741", "email": "moinmoinentenangeln@gmail.com", "email_verified": true, "phone_verified": false}	email	2026-08-06 17:11:27.105098+00	2026-08-06 17:11:27.105147+00	2026-08-06 17:11:27.105147+00	b49121e9-cb19-4d36-8a50-94f231fa7c3d
+8350d854-a183-4841-839f-aaa4be7d08ad	8350d854-a183-4841-839f-aaa4be7d08ad	{"sub": "8350d854-a183-4841-839f-aaa4be7d08ad", "email": "fabritz@circus-circus.de", "email_verified": true, "phone_verified": false}	email	2026-08-06 21:10:08.416216+00	2026-08-06 21:10:08.416278+00	2026-08-06 21:10:08.416278+00	3b362bdc-ea61-4e0d-ab5e-d4938f503984
 \.
 
 
@@ -194,6 +201,8 @@ b71e1586-e723-4005-b627-a7ce66de4d2c	10689631-5ff1-43db-8f2a-cac4140b6696	2026-0
 5c37a304-9dfa-47bb-8ce7-4d421865cc62	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	2026-06-03 15:20:54.883798+00	2026-08-05 08:16:16.165452+00	\N	aal1	\N	2026-08-05 08:16:16.164962	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Safari/605.1.15	47.64.51.28	\N	\N	\N	\N	\N
 bf0f9d4f-94ff-434d-bce8-b70b6844f68c	f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	2026-08-05 20:31:58.887768+00	2026-08-05 20:31:58.887768+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5.2 Safari/605.1.15	104.28.54.54	\N	\N	\N	\N	\N
 629c38fd-422d-44a6-be99-91f2b0da6a48	ec4e8feb-e17b-4dc2-a861-50c93b99530e	2026-07-16 19:09:44.374289+00	2026-07-28 20:29:54.750715+00	\N	aal1	\N	2026-07-28 20:29:54.750606	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0	87.177.93.6	\N	\N	\N	\N	\N
+a90f753c-6636-430a-bfed-0be088b53eb4	b4cc4a99-3c7d-471d-95a4-b0008386f741	2026-08-06 17:12:04.036351+00	2026-08-06 17:12:04.036351+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0	145.224.75.176	\N	\N	\N	\N	\N
+58f99df8-6475-40cf-9155-6d836c1c9110	8350d854-a183-4841-839f-aaa4be7d08ad	2026-08-06 21:10:34.66132+00	2026-08-06 21:10:34.66132+00	\N	aal1	\N	\N	Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/153.2 Mobile/15E148 Safari/604.1	176.5.58.156	\N	\N	\N	\N	\N
 \.
 
 
@@ -229,6 +238,8 @@ b71e1586-e723-4005-b627-a7ce66de4d2c	2026-07-22 12:02:10.49374+00	2026-07-22 12:
 0d4ed466-46c8-445b-a388-48a58483c4f8	2026-08-02 12:13:28.835619+00	2026-08-02 12:13:28.835619+00	otp	03f8b874-c392-47d8-a2d9-7a06a1314699
 3adfe23f-bc6a-4aad-acb6-e0776bf2e1cf	2026-08-02 12:16:13.77273+00	2026-08-02 12:16:13.77273+00	password	819bb1e5-7250-4c10-8070-0bc233ffdd0d
 bf0f9d4f-94ff-434d-bce8-b70b6844f68c	2026-08-05 20:31:58.940766+00	2026-08-05 20:31:58.940766+00	password	ca6aeab8-60a1-47c9-a891-8f1055611325
+a90f753c-6636-430a-bfed-0be088b53eb4	2026-08-06 17:12:04.069773+00	2026-08-06 17:12:04.069773+00	otp	9b19a74e-b75b-4c96-9bda-bd2bbe34858a
+58f99df8-6475-40cf-9155-6d836c1c9110	2026-08-06 21:10:34.692671+00	2026-08-06 21:10:34.692671+00	otp	b50aa6f4-882a-40bd-83d8-e8ef8533272d
 \.
 
 
@@ -390,6 +401,8 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	302	lvfjbfwxixym	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	t	2026-08-02 08:40:31.486679+00	2026-08-05 08:16:16.135218+00	vkvdamlh2fgn	5c37a304-9dfa-47bb-8ce7-4d421865cc62
 00000000-0000-0000-0000-000000000000	305	as3kok3nnwnv	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	f	2026-08-05 08:16:16.152065+00	2026-08-05 08:16:16.152065+00	lvfjbfwxixym	5c37a304-9dfa-47bb-8ce7-4d421865cc62
 00000000-0000-0000-0000-000000000000	307	5hietcq6tk4y	f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	f	2026-08-05 20:31:58.917221+00	2026-08-05 20:31:58.917221+00	\N	bf0f9d4f-94ff-434d-bce8-b70b6844f68c
+00000000-0000-0000-0000-000000000000	308	yfl6byq5zqpw	b4cc4a99-3c7d-471d-95a4-b0008386f741	f	2026-08-06 17:12:04.051466+00	2026-08-06 17:12:04.051466+00	\N	a90f753c-6636-430a-bfed-0be088b53eb4
+00000000-0000-0000-0000-000000000000	309	v2igsw6adnsv	8350d854-a183-4841-839f-aaa4be7d08ad	f	2026-08-06 21:10:34.676367+00	2026-08-06 21:10:34.676367+00	\N	58f99df8-6475-40cf-9155-6d836c1c9110
 \.
 
 
@@ -3458,7 +3471,7 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 307, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 309, true);
 
 
 --
@@ -3472,6 +3485,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_NR_seq"', 1780872102062, true);
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict i3wzkw6XZlHiN4lt80w4dd0SUtq92WvvFMHD97BvMBpcdz18xTPr6YQrTWlMPbE
+-- \unrestrict oBZIqy2Gu48WAXRpn4XAD3xJN4vSPeDxa7cH8XFyjodIcVtSorPZvgMdQvnhjrK
 
 RESET ALL;

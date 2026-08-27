@@ -382,7 +382,9 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten" (
     "pl_attr" "text",
     "pl_plz" "text",
     "pl_dauer" bigint,
-    "va_land" "text"
+    "va_land" "text",
+    "org_on_bew" boolean,
+    "org_on_name" "text"
 );
 
 
@@ -393,11 +395,31 @@ COMMENT ON TABLE "public"."platzdaten" IS 'Tabelle für Kirmespätze';
 
 
 
+COMMENT ON COLUMN "public"."platzdaten"."pl_ort" IS 'Platz, Ort';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."va_adresse" IS 'Veranstalter, Strassenname';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."int_kontrolle" IS 'Internes Kontrollfeld';
+
+
+
 COMMENT ON COLUMN "public"."platzdaten"."pl_beschreibung" IS 'Beschreibung des Platzes';
 
 
 
+COMMENT ON COLUMN "public"."platzdaten"."pl_web" IS 'Platz, Webseite';
+
+
+
 COMMENT ON COLUMN "public"."platzdaten"."va_web" IS 'Veranstalter Webseite';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."va_name" IS 'Veranstalter-Name';
 
 
 
@@ -409,11 +431,43 @@ COMMENT ON COLUMN "public"."platzdaten"."XXX_pl_plz_alt" IS 'Alte Postleitzahl m
 
 
 
+COMMENT ON COLUMN "public"."platzdaten"."va_ort" IS 'Veranstalter, Ort';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_location" IS 'Platz, Lage des Platzes, Ortsbezeichnung';
+
+
+
 COMMENT ON COLUMN "public"."platzdaten"."kal_region" IS 'Kalender-Region';
 
 
 
+COMMENT ON COLUMN "public"."platzdaten"."pl_start" IS 'Platz, Startdatum';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_ende" IS 'Platz Enddatum';
+
+
+
 COMMENT ON COLUMN "public"."platzdaten"."futur_start" IS 'Zukünftige Termine Start';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_lat" IS 'Platz, Längengrad';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_lon" IS 'Platz, Breitengrad';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_gplus" IS 'Platz, G+-GeoDaten';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."pl_attr" IS 'Platz, Anzahl der Attraktivitäten';
 
 
 
@@ -426,6 +480,14 @@ COMMENT ON COLUMN "public"."platzdaten"."pl_dauer" IS 'Laufzeit des Platzes';
 
 
 COMMENT ON COLUMN "public"."platzdaten"."va_land" IS 'Veranstalter, Land';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."org_on_bew" IS 'Online-Bewerbung?';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."org_on_name" IS 'Begriff, der auf der Webseite gefunden wurde';
 
 
 

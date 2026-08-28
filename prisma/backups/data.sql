@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict ZyoBUgQwKci4RTmEUQjLzK82OTqb9xjOloT7L503w2xGm85Ob1OsJm1fIg6u4IQ
+-- \restrict 30yYm5wiccmowG3JjI46ydubRZZo0Q1eGxj5ideuNQrcPvTDHgTNSbkGqU4eMZa
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -123,7 +123,9 @@ COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_pas
 00000000-0000-0000-0000-000000000000	ec4e8feb-e17b-4dc2-a861-50c93b99530e	authenticated	authenticated	tournee@schaustelleranfragen.de	$2a$10$rTBKCgMV81PFwZjYqHWE6.uRnplGziHvJbwSDyE8FYXNy8fOBjDGG	2026-04-06 18:26:47.070237+00	\N		\N	37729a14a970dff9020e94ec22e11a4fafb6df6b369fcdafdd161d92	2026-06-17 21:37:47.577089+00			\N	2026-08-15 21:08:03.032959+00	{"provider": "email", "providers": ["email"]}	{"sub": "ec4e8feb-e17b-4dc2-a861-50c93b99530e", "email": "tournee@schaustelleranfragen.de", "email_verified": true, "phone_verified": false}	\N	2026-04-06 18:26:27.435482+00	2026-08-16 10:21:46.418686+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	45db943e-5a82-46a6-8f5c-28f33ecf3650	authenticated	authenticated	gilbertmarquis95@yahoo.de	$2a$10$rNxCvai39b4u3C8E.pPcRON7fMSoS.nuRN/owWGaM2UWtl6AJfdeK	2026-08-13 00:31:27.517872+00	\N		2026-08-13 00:31:15.491199+00		\N			\N	2026-08-17 14:17:48.159307+00	{"provider": "email", "providers": ["email"]}	{"sub": "45db943e-5a82-46a6-8f5c-28f33ecf3650", "email": "gilbertmarquis95@yahoo.de", "email_verified": true, "phone_verified": false}	\N	2026-08-13 00:31:15.39081+00	2026-08-25 14:15:19.943089+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	562e6f77-6c16-4793-a7c4-e8a56537b125	authenticated	authenticated	s.massel@aol.com	$2a$10$UEW50jis5PI6JLBZjAnOv.gGglkYmspV1Iuzn5n49vSWfo1zLOZGu	\N	\N	0424b5943a5636f1ee7d78010c205b46b3e98c5990d03ed8169370e5	2026-08-18 18:41:42.015168+00		\N			\N	\N	{"provider": "email", "providers": ["email"]}	{"sub": "562e6f77-6c16-4793-a7c4-e8a56537b125", "email": "s.massel@aol.com", "email_verified": false, "phone_verified": false}	\N	2026-08-18 18:41:41.957988+00	2026-08-18 18:41:42.635905+00	\N	\N			\N		0	\N		\N	f	\N	f
-00000000-0000-0000-0000-000000000000	996c3fcb-86d0-44a8-895e-7f22303f888f	authenticated	authenticated	schaustellerbetrieb.rosenboom@gmail.com	$2a$10$y12ygZWeeIWJR5TOQ8P70u4YCwFeQAHdHoOiLmdZkfsjL.RtTdolq	2026-08-15 20:00:52.586868+00	\N		2026-08-15 19:57:56.013039+00		\N			\N	2026-08-15 20:00:52.605178+00	{"provider": "email", "providers": ["email"]}	{"sub": "996c3fcb-86d0-44a8-895e-7f22303f888f", "email": "schaustellerbetrieb.rosenboom@gmail.com", "email_verified": true, "phone_verified": false}	\N	2026-08-15 19:57:55.953819+00	2026-08-15 20:59:10.026916+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	996c3fcb-86d0-44a8-895e-7f22303f888f	authenticated	authenticated	schaustellerbetrieb.rosenboom@gmail.com	$2a$10$y12ygZWeeIWJR5TOQ8P70u4YCwFeQAHdHoOiLmdZkfsjL.RtTdolq	2026-08-15 20:00:52.586868+00	\N		2026-08-15 19:57:56.013039+00		\N			\N	2026-08-28 09:44:13.229489+00	{"provider": "email", "providers": ["email"]}	{"sub": "996c3fcb-86d0-44a8-895e-7f22303f888f", "email": "schaustellerbetrieb.rosenboom@gmail.com", "email_verified": true, "phone_verified": false}	\N	2026-08-15 19:57:55.953819+00	2026-08-28 09:44:13.277936+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	15aa1e2f-1c91-4eef-9487-b10e1a536554	authenticated	authenticated	star.cafe@myyahoo.com	$2a$10$6eEgm5N/sxugGEqnQWNYEuiSs57Spcu2y0dsFIS8V8fNKTOfauMka	2026-08-28 09:20:27.92364+00	\N		2026-08-28 09:19:54.41287+00		\N			\N	2026-08-28 09:20:27.931139+00	{"provider": "email", "providers": ["email"]}	{"sub": "15aa1e2f-1c91-4eef-9487-b10e1a536554", "email": "star.cafe@myyahoo.com", "email_verified": true, "phone_verified": false}	\N	2026-08-28 09:19:54.362751+00	2026-08-28 09:20:27.963028+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	6c2ce57e-bf42-4137-8548-d8d869dfa459	authenticated	authenticated	david.peiffer@web.de	$2a$10$UFp8.x708gYpZafSpU7TLudOrwKhZyxQ10vsXvpaD/TeJBUyNed8i	2026-08-27 19:38:30.006081+00	\N		2026-08-27 19:37:49.126481+00		\N			\N	2026-08-27 20:01:28.22185+00	{"provider": "email", "providers": ["email"]}	{"sub": "6c2ce57e-bf42-4137-8548-d8d869dfa459", "email": "david.peiffer@web.de", "email_verified": true, "phone_verified": false}	\N	2026-08-27 19:37:49.074187+00	2026-08-27 20:01:28.266593+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -160,6 +162,8 @@ edf3c05d-6059-4ba5-92e5-b77a55c37ff5	edf3c05d-6059-4ba5-92e5-b77a55c37ff5	{"sub"
 45db943e-5a82-46a6-8f5c-28f33ecf3650	45db943e-5a82-46a6-8f5c-28f33ecf3650	{"sub": "45db943e-5a82-46a6-8f5c-28f33ecf3650", "email": "gilbertmarquis95@yahoo.de", "email_verified": true, "phone_verified": false}	email	2026-08-13 00:31:15.451115+00	2026-08-13 00:31:15.451172+00	2026-08-13 00:31:15.451172+00	456fca66-68f0-484c-b966-da079dc40559
 996c3fcb-86d0-44a8-895e-7f22303f888f	996c3fcb-86d0-44a8-895e-7f22303f888f	{"sub": "996c3fcb-86d0-44a8-895e-7f22303f888f", "email": "schaustellerbetrieb.rosenboom@gmail.com", "email_verified": true, "phone_verified": false}	email	2026-08-15 19:57:55.991502+00	2026-08-15 19:57:55.991552+00	2026-08-15 19:57:55.991552+00	5aae1ff5-cd86-43d7-b67b-8ee764e87a43
 562e6f77-6c16-4793-a7c4-e8a56537b125	562e6f77-6c16-4793-a7c4-e8a56537b125	{"sub": "562e6f77-6c16-4793-a7c4-e8a56537b125", "email": "s.massel@aol.com", "email_verified": false, "phone_verified": false}	email	2026-08-18 18:41:41.992197+00	2026-08-18 18:41:41.992252+00	2026-08-18 18:41:41.992252+00	adb70dad-c913-4e38-b11c-1224c93f9bb1
+6c2ce57e-bf42-4137-8548-d8d869dfa459	6c2ce57e-bf42-4137-8548-d8d869dfa459	{"sub": "6c2ce57e-bf42-4137-8548-d8d869dfa459", "email": "david.peiffer@web.de", "email_verified": true, "phone_verified": false}	email	2026-08-27 19:37:49.110285+00	2026-08-27 19:37:49.110336+00	2026-08-27 19:37:49.110336+00	7d9c41c1-1bde-4437-865f-7a028e0a22d0
+15aa1e2f-1c91-4eef-9487-b10e1a536554	15aa1e2f-1c91-4eef-9487-b10e1a536554	{"sub": "15aa1e2f-1c91-4eef-9487-b10e1a536554", "email": "star.cafe@myyahoo.com", "email_verified": true, "phone_verified": false}	email	2026-08-28 09:19:54.390699+00	2026-08-28 09:19:54.390746+00	2026-08-28 09:19:54.390746+00	1b188d81-e94d-4308-8d15-9cf8ef74078f
 \.
 
 
@@ -217,6 +221,9 @@ a90f753c-6636-430a-bfed-0be088b53eb4	b4cc4a99-3c7d-471d-95a4-b0008386f741	2026-0
 a43dc788-b3af-41a0-87d6-fafab266ee2e	ec4e8feb-e17b-4dc2-a861-50c93b99530e	2026-08-15 21:08:03.037575+00	2026-08-16 10:21:46.42549+00	\N	aal1	\N	2026-08-16 10:21:46.425392	Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:153.0) Gecko/20100101 Firefox/153.0	79.195.46.206	\N	\N	\N	\N	\N
 2f61451f-3fd0-4e6a-a5b2-181176c5dac8	45db943e-5a82-46a6-8f5c-28f33ecf3650	2026-08-13 00:31:27.537226+00	2026-08-17 14:16:25.69513+00	\N	aal1	\N	2026-08-17 14:16:25.69503	Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5.2 Mobile/15E148 Safari/604.1	109.41.49.174	\N	\N	\N	\N	\N
 d9dbf5ba-8e0a-47b7-bc25-244b41aafcb8	45db943e-5a82-46a6-8f5c-28f33ecf3650	2026-08-17 14:17:48.167291+00	2026-08-25 14:15:19.947513+00	\N	aal1	\N	2026-08-25 14:15:19.947421	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.7.5 Safari/605.1.15	109.41.51.154	\N	\N	\N	\N	\N
+2674bf0e-3fb7-425f-a320-315e516de3c1	6c2ce57e-bf42-4137-8548-d8d869dfa459	2026-08-27 20:01:28.223482+00	2026-08-27 20:01:28.223482+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36 Edg/151.0.0.0	93.208.174.210	\N	\N	\N	\N	\N
+4f898e77-2683-41e5-8727-a6539e9d2f42	15aa1e2f-1c91-4eef-9487-b10e1a536554	2026-08-28 09:20:27.931416+00	2026-08-28 09:20:27.931416+00	\N	aal1	\N	\N	Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Mobile/15E148 Safari/604.1	47.64.86.38	\N	\N	\N	\N	\N
+cecc6fb2-b289-40c3-8341-ec0848181f6f	996c3fcb-86d0-44a8-895e-7f22303f888f	2026-08-28 09:44:13.229587+00	2026-08-28 09:44:13.229587+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.6 Safari/605.1.15	149.172.188.89	\N	\N	\N	\N	\N
 \.
 
 
@@ -258,6 +265,9 @@ a90f753c-6636-430a-bfed-0be088b53eb4	2026-08-06 17:12:04.069773+00	2026-08-06 17
 5e7245e4-56f9-4e86-8b5c-9b8547ce51b5	2026-08-13 12:02:27.091343+00	2026-08-13 12:02:27.091343+00	password	9da3c20e-8da0-4a22-85a6-2cbf6af04aa3
 a43dc788-b3af-41a0-87d6-fafab266ee2e	2026-08-15 21:08:03.17976+00	2026-08-15 21:08:03.17976+00	password	550ade87-2bea-485c-bcef-4bb9daf4ba1d
 d9dbf5ba-8e0a-47b7-bc25-244b41aafcb8	2026-08-17 14:17:48.215334+00	2026-08-17 14:17:48.215334+00	password	87888d67-f332-4f58-a1f8-05feb3c7d7b9
+2674bf0e-3fb7-425f-a320-315e516de3c1	2026-08-27 20:01:28.269271+00	2026-08-27 20:01:28.269271+00	password	7b1948e6-3291-40ab-bbf6-109ae431654b
+4f898e77-2683-41e5-8727-a6539e9d2f42	2026-08-28 09:20:27.963606+00	2026-08-28 09:20:27.963606+00	otp	87f832c6-45c3-4cb6-b8aa-97f42ea6bea8
+cecc6fb2-b289-40c3-8341-ec0848181f6f	2026-08-28 09:44:13.282082+00	2026-08-28 09:44:13.282082+00	password	8852588e-1d87-4a9c-b91e-4681f6f917a0
 \.
 
 
@@ -468,6 +478,9 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	362	h6nch32eepev	45db943e-5a82-46a6-8f5c-28f33ecf3650	t	2026-08-25 11:54:38.838051+00	2026-08-25 13:16:27.068427+00	4mwiekqeavd7	d9dbf5ba-8e0a-47b7-bc25-244b41aafcb8
 00000000-0000-0000-0000-000000000000	363	tr2apiqsnkzj	45db943e-5a82-46a6-8f5c-28f33ecf3650	t	2026-08-25 13:16:27.084455+00	2026-08-25 14:15:19.914884+00	h6nch32eepev	d9dbf5ba-8e0a-47b7-bc25-244b41aafcb8
 00000000-0000-0000-0000-000000000000	364	h3jpzljesq4z	45db943e-5a82-46a6-8f5c-28f33ecf3650	f	2026-08-25 14:15:19.933205+00	2026-08-25 14:15:19.933205+00	tr2apiqsnkzj	d9dbf5ba-8e0a-47b7-bc25-244b41aafcb8
+00000000-0000-0000-0000-000000000000	366	5ne63n7g65wn	6c2ce57e-bf42-4137-8548-d8d869dfa459	f	2026-08-27 20:01:28.248215+00	2026-08-27 20:01:28.248215+00	\N	2674bf0e-3fb7-425f-a320-315e516de3c1
+00000000-0000-0000-0000-000000000000	367	6eu5muj2ff4r	15aa1e2f-1c91-4eef-9487-b10e1a536554	f	2026-08-28 09:20:27.943546+00	2026-08-28 09:20:27.943546+00	\N	4f898e77-2683-41e5-8727-a6539e9d2f42
+00000000-0000-0000-0000-000000000000	368	lailacncec6m	996c3fcb-86d0-44a8-895e-7f22303f888f	f	2026-08-28 09:44:13.255088+00	2026-08-28 09:44:13.255088+00	\N	cecc6fb2-b289-40c3-8341-ec0848181f6f
 \.
 
 
@@ -836,6 +849,7 @@ Cloppenburg	2527	Sevelter Straße 8, 49661 Cloppenburg		KDRP	rathaus@cloppenburg
 Erkelenz	2528	Johannismarkt 17, 41812 Erkelenz		KDRP	info@erkelenz.de	L	Die Burgkirmes in Erkelenz ist ein traditionsreiches Volksfest rund um die Burg, den Ziegelweiherpark und die Innenstadt. Mit rund 65 Schaustellern bietet sie ein buntes Programm aus rasanten Fahrgeschäften, Jahrmarktsklassikern, einem großen Feuerwerk und einem Familientag. Das Event ist ein beliebter Treffpunkt für die ganze Familie.	https://www.erkelenz.de	https://www.erkelenz.de	Stadt Erkelenz, Ordnungsamt	Burgkirmes	\N	Erkelenz	27.8.2026	Dr.-Josef-Hahn-Platz, Burgstraße, Johannismarkt	D-41812 Erkelenz	W	\N	2026-09-11	2026-09-14	\N	\N	\N	2026-08-26 23:00:13.92267+00	51.0805	6.3155	949M+5V Erkelenz	65	41812	4	\N	f	
 Bietigheim-Bissingen	3104	Marktplatz 9		KDRP	info@bietigheim-bissingen.de	L	Der Bietigheimer Pferdemarkt ist das traditionsreichste Volksfest der Region am Bietigheimer Enzviadukt. Die Veranstaltung lockt jährlich mit einer Mischung aus einem großen Reit- und Springturnier, einem bunten Festumzug, einem Krämermarkt sowie einem Vergnügungspark mit Festzelt.	https://www.bietigheim-bissingen.de	https://www.bietigheim-bissingen.de	Stadtverwaltung Bietigheim-Bissingen	Pferdemarkt 	\N	74321 Bietigheim-Bissingen	16.4.2026	Festplatz am Viadukt	D-74321 Bietigheim-Bissingen	S	\N	2026-09-04	2026-09-08	2027-09-03	2027-09-07	\N	2026-08-26 20:54:55.302682+00	48.9625	9.1308	8FW4G795+84	50	74321	5	\N	\N	\N
 Wetzikon	2101	Bahnhofstrasse 167		KDRP	roger.kuendig@wetzikon.ch	M	The Wetziker Chilbi is the largest rural fair in the Canton of Zurich, featuring around 40 rides and game booths. It includes a large market with over 100 stalls, diverse food stands, and traditional festival tents. The event is a regional highlight held annually in August on the Chilbiplatz in Wetzikon.	http://www.wetziker-chilbi.ch	https://www.wetzikon.ch	Stadt Wetzikon (Abteilung Sicherheit)	Wetziker Chilbi	CH-8620	CH-8620 Wetzikon	5.4.2026	Chilbiplatz Wetzikon	CH Wetzikon	Ausland	2101-CH	2026-08-15	2026-08-17	2027-08-21	2027-08-23	2026-11-30	2026-06-09 19:09:47.834941+00	47.32356	8.80415	8G27+H8W Wetzikon, Switzerland	40	CG-8620	3	Schweiz	\N	\N
+Aachen	1780872102069	Johannes-Paul-II.-Straße 1	david.peiffer@web.de	von Tournee	maerkte@mail.aachen.de	\N	Der Öcher Sommerbend ist ein traditionsreiches Volksfest in Aachen, das jährlich im August auf dem Bendplatz stattfindet und eine Vielzahl von Fahrgeschäften, Gastronomie und Unterhaltung bietet.	https://www.bend-aachen.de/	https://www.aachen.de/	Stadt Aachen - Fachbereich Wirtschaft, Wissenschaft und Europa	Öcher Sommerbend	\N	Aachen	\N	Bendplatz, Süsterfeldstraße	\N	W	\N	2027-08-13	2027-08-23	2028-08-11	2028-08-21	2027-10-31	2026-08-27 20:12:38.933033+00	50.78417	6.07444	\N	100	52072	\N	\N	\N	\N
 Jena	147	Löbdergraben 14a	\N	KDRP2	maerkte@jena.de	L	Der Jenaer Frühlingsmarkt bietet ein abwechslungsreiches Programm mit Live-Musik, Fahrgeschäften und kulinarischen Köstlichkeiten auf dem historischen Marktplatz. Das zehntägige Volksfest lädt Besucher aller Altersgruppen zum Feiern ein und beinhaltet wochentags eine spezielle Stille Stunde für geräuschempfindliche Gäste.	https://www.jenakultur.de/maerkte	https://www.jenakultur.de	JenaKultur	Frühlingsmarkt	D-07743	07743 Jena	3.4.2026	Marktplatz und Eichplatz	D-07743 Jena	O	077-147	2026-05-08	2026-05-17	2027-05-07	2027-05-16	2027-01-08	2026-05-15 20:33:39.795196+00	50.9287	11.5892	FR9R+RP Jena	20	07743	10	\N	\N	\N
 Offenburg	3087	Hauptstraße 90		KDRP	stadtmarketing@offenburg.de	\N	Das Ortenauer Weinfest in Offenburg ist eines der größten und traditionsreichsten Weinfeste der Region, bei dem zahlreiche Winzer und Weingüter ihre erlesenen Weine präsentieren. Besucher erwartet eine genussvolle Atmosphäre mit einer großen Auswahl an Weinen und Sekten sowie ein abwechslungsreiches musikalisches Rahmenprogramm. Das Fest findet in der Offenburger Innenstadt rund um den Marktplatz und das Rathaus statt.	https://www.offenburg.de	https://www.offenburg.de	Stadt Offenburg - Abteilung Stadtmarketing	Ortenauer Weinfest	\N	77652 Offenburg	7.6.2026	Innenstadt (Marktplatz/Rathausplatz)	D-77652 Offenburg	S	\N	2026-09-25	2026-09-28	\N	\N	\N	2026-08-26 20:54:55.302682+00	48.4735	7.9439	4X3H+95 Offenburg	k.A.	77652	4	\N	\N	\N
 's-Heerenberg	976	Hof van Bergh 8	\N	KDRP	info@kunstwandelroutehuisbergh.nl	\N	Die KUNSTwandelroute Huis Bergh ist eine bedeutende jährliche Kunstveranstaltung, die sich rund um das historische Kasteel Huis Bergh erstreckt. Besucher können auf einem malerischen Rundweg zahlreiche Kunstwerke in der Natur erleben. Die Veranstaltung findet traditionell zwischen Ostern und Pfingsten statt.	https://www.kunstwandelroutehuisbergh.nl	https://www.kunstwandelroutehuisbergh.nl	KUNSTwandelroute-commissie van Het WEB	\N	\N	7041 AC 's-Heerenberg	26.8.2026	Landgoed Huis Bergh, Hof van Bergh 8	D-NL-7041 AC 's-Heerenberg	S	\N	2026-04-02	2026-05-25	\N	\N	\N	2026-08-26 21:26:18.894836+00	51.87417	6.24083	P833+63 's-Heerenberg, Netherlands	31 kunstwerken	7041 AC	\N	\N	f	
@@ -2728,6 +2742,7 @@ COPY "public"."bewerbungen" ("id", "user_id", "geschaeft_id", "platz_id", "statu
 c990b0ac-b783-4fc8-a2fa-4cccda208b67	ec4e8feb-e17b-4dc2-a861-50c93b99530e	9ec94bc9-6d29-4a64-818e-23e60a9a63e8	290	pending	2026-04-10 20:15:16.141599+00	2026-05-26 12:43:46.418355+00
 ac6ef122-d24a-431f-94ae-bebcbae36795	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	959	pending	2026-06-14 08:28:37.754348+00	2026-07-02 10:28:20.344373+00
 ea4a29e4-c97a-4b0f-b4ef-5c6cc938da0f	ec4e8feb-e17b-4dc2-a861-50c93b99530e	9ec94bc9-6d29-4a64-818e-23e60a9a63e8	2649	pending	2026-05-24 21:01:03.61889+00	2026-05-26 14:20:01.384681+00
+c14d4a12-fda9-4b3e-b642-4d48ea2e6d87	996c3fcb-86d0-44a8-895e-7f22303f888f	0d0e34b2-d672-4cb8-b77f-9428cdbf8630	344	selected	2026-08-28 09:46:11.578954+00	2026-08-28 09:46:11.578954+00
 8badab94-1bbe-4afc-a39b-ec9c0f9d64de	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	520	pending	2026-06-03 15:25:30.063089+00	2026-07-02 10:29:00.892428+00
 e8cecfac-726d-43e4-afdd-cfb915f71653	86237551-e5f5-4380-8773-0e621768d16c	8dd15c24-435d-4dfe-a453-1dc104512821	655	selected	2026-06-02 16:11:32.004224+00	2026-06-02 16:11:32.004224+00
 03454047-6069-491e-8cfc-2ad3cb11d00e	86237551-e5f5-4380-8773-0e621768d16c	8dd15c24-435d-4dfe-a453-1dc104512821	201	selected	2026-06-02 16:11:46.740471+00	2026-06-02 16:11:46.740471+00
@@ -3066,6 +3081,7 @@ b0e935ad-9c91-40a2-b715-d496b719ed9d	Patrik Enders Schaustellerbetriebe	Patrik E
 10689631-5ff1-43db-8f2a-cac4140b6696	Danny Reminder	Danny Reminder 	Edisonstr 13	48432	Rheine		dannyreminder@yahoo.de		 DE214 65 8149	DE 271274711	2026-07-22 12:21:58.753517+00	Einzelunternehmen	Edisonstr 13	01784679835			DE 271274711					Duisburg	2007-10-22	https://xvgvogufmznqlfxwgmfw.supabase.co/storage/v1/object/public/firmendaten/10689631-5ff1-43db-8f2a-cac4140b6696/rgk_a_1784722817392.jpeg	Nürnberger		\N			2006-06-22	{"BGN Mod 1 - Aufsichtführende für Fliegenden Bauten","BGN Mod 2 - Aufsichtführende f. Fliegenden Bauten, technisch schwierig","Gefährdungsbeurteilung für Schausteller","Sicher und gesund für Schausteller","Führerschein für Krane","Führerschein für Gabelstapler"}	\n\n---SYSTEM_METADATA_START---\n{"registerauszugScan":"","gesellschaftsvertragScan":"","meldenachweisScan":"","rgkScanB":"https://xvgvogufmznqlfxwgmfw.supabase.co/storage/v1/object/public/firmendaten/10689631-5ff1-43db-8f2a-cac4140b6696/rgk_b_1784722824421.jpeg","rgkScanC":"https://xvgvogufmznqlfxwgmfw.supabase.co/storage/v1/object/public/firmendaten/10689631-5ff1-43db-8f2a-cac4140b6696/rgk_c_1784722831176.jpeg","rgkScanD":"https://xvgvogufmznqlfxwgmfw.supabase.co/storage/v1/object/public/firmendaten/10689631-5ff1-43db-8f2a-cac4140b6696/rgk_d_1784722837770.jpeg"}\n---SYSTEM_METADATA_END---			Recklinghausen, Sterkrade,Hamburger Dom,Düsseldorfer Rheinkirmes,Oldenburger Kramermarkt,Bremen Osterwiese,		t		{DSB}	\N	\N	
 f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	Thomas Koch	Damian Traber & Franziska Traber	Im Stöckacker 10	79224	Umkirch		office@wurst-koch.de	https://www.wurst-koch.de			2026-08-05 19:52:41.369554+00	GmbH	Im Stöckacker 10	+49 163 4943068									\N				\N			1936-01-01	{}	\n\n---SYSTEM_METADATA_START---\n{"registerauszugScan":"","gesellschaftsvertragScan":"","meldenachweisScan":"","rgkScanB":"","rgkScanC":"","rgkScanD":""}\n---SYSTEM_METADATA_END---					t		{}	\N	\N	
 edf3c05d-6059-4ba5-92e5-b77a55c37ff5	Der Nusskönig	Robert	Pellenzstraße 6	56642 	Kruft		kueperrobert@icloud.com				2026-08-07 15:23:55.55907+00	Einzelunternehmen	Pellenzstraße 6										\N				\N			\N	{}	\n\n---SYSTEM_METADATA_START---\n{"registerauszugScan":"","gesellschaftsvertragScan":"","meldenachweisScan":"","rgkScanB":"","rgkScanC":"","rgkScanD":""}\n---SYSTEM_METADATA_END---					t		{}	\N	\N	
+6c2ce57e-bf42-4137-8548-d8d869dfa459	Schaustellerbetrieb David Peiffer	David Peiffer 	Mühlenend 38	52445	Titz-Rödingen 		david.peiffer@web.de				2026-08-27 19:40:29.705404+00	Einzelunternehmen	Mühlenend 38	015224735754		015224735754							\N				\N			\N	{}	\n\n---SYSTEM_METADATA_START---\n{"registerauszugScan":"","gesellschaftsvertragScan":"","meldenachweisScan":"","rgkScanB":"","rgkScanC":"","rgkScanD":""}\n---SYSTEM_METADATA_END---					t		{DSB}	2026-08-27	läuft	
 \.
 
 
@@ -3657,20 +3673,20 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 364, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 368, true);
 
 
 --
 -- Name: platzdaten_NR_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."platzdaten_NR_seq"', 1780872102068, true);
+SELECT pg_catalog.setval('"public"."platzdaten_NR_seq"', 1780872102069, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict ZyoBUgQwKci4RTmEUQjLzK82OTqb9xjOloT7L503w2xGm85Ob1OsJm1fIg6u4IQ
+-- \unrestrict 30yYm5wiccmowG3JjI46ydubRZZo0Q1eGxj5ideuNQrcPvTDHgTNSbkGqU4eMZa
 
 RESET ALL;

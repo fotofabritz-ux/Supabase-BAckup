@@ -201,7 +201,7 @@ SET default_tablespace = '';
 SET default_table_access_method = "heap";
 
 
-CREATE TABLE IF NOT EXISTS "public"."Stadtdaten" (
+CREATE TABLE IF NOT EXISTS "public"."stadtdaten" (
     "pl_ort" "text",
     "nr" bigint NOT NULL,
     "va_adresse" "text",
@@ -214,13 +214,11 @@ CREATE TABLE IF NOT EXISTS "public"."Stadtdaten" (
     "va_web" "text",
     "va_name" "text",
     "pl_bez" "text",
-    "XXX_pl_plz_alt" "text",
     "va_ort" "text",
     "int_check" "text",
     "pl_location" "text",
     "kal_plzort" "text",
     "kal_region" "text" NOT NULL,
-    "XXX_pl_id" "text",
     "pl_start" "date",
     "pl_ende" "date",
     "futur_start" "date",
@@ -239,110 +237,106 @@ CREATE TABLE IF NOT EXISTS "public"."Stadtdaten" (
 );
 
 
-ALTER TABLE "public"."Stadtdaten" OWNER TO "postgres";
+ALTER TABLE "public"."stadtdaten" OWNER TO "postgres";
 
 
-COMMENT ON TABLE "public"."Stadtdaten" IS 'This is a duplicate of platzdaten';
+COMMENT ON TABLE "public"."stadtdaten" IS 'This is a duplicate of platzdaten';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_ort" IS 'Platz, Ort';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_ort" IS 'Platz, Ort';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."va_adresse" IS 'Veranstalter, Strassenname';
+COMMENT ON COLUMN "public"."stadtdaten"."va_adresse" IS 'Veranstalter, Strassenname';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."int_kontrolle" IS 'Internes Kontrollfeld';
+COMMENT ON COLUMN "public"."stadtdaten"."int_kontrolle" IS 'Internes Kontrollfeld';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_beschreibung" IS 'Beschreibung des Platzes';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_beschreibung" IS 'Beschreibung des Platzes';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_web" IS 'Platz, Webseite';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_web" IS 'Platz, Webseite';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."va_web" IS 'Veranstalter Webseite';
+COMMENT ON COLUMN "public"."stadtdaten"."va_web" IS 'Veranstalter Webseite';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."va_name" IS 'Veranstalter-Name';
+COMMENT ON COLUMN "public"."stadtdaten"."va_name" IS 'Veranstalter-Name';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_bez" IS 'Bezeichnung des Platzes';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_bez" IS 'Bezeichnung des Platzes';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."XXX_pl_plz_alt" IS 'Alte Postleitzahl mit "D-"';
+COMMENT ON COLUMN "public"."stadtdaten"."va_ort" IS 'Veranstalter, Ort';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."va_ort" IS 'Veranstalter, Ort';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_location" IS 'Platz, Lage des Platzes, Ortsbezeichnung';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_location" IS 'Platz, Lage des Platzes, Ortsbezeichnung';
+COMMENT ON COLUMN "public"."stadtdaten"."kal_region" IS 'Kalender-Region';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."kal_region" IS 'Kalender-Region';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_start" IS 'Platz, Startdatum';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_start" IS 'Platz, Startdatum';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_ende" IS 'Platz Enddatum';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_ende" IS 'Platz Enddatum';
+COMMENT ON COLUMN "public"."stadtdaten"."futur_start" IS 'Zukünftige Termine Start';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."futur_start" IS 'Zukünftige Termine Start';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_lat" IS 'Platz, Längengrad';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_lat" IS 'Platz, Längengrad';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_lon" IS 'Platz, Breitengrad';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_lon" IS 'Platz, Breitengrad';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_gplus" IS 'Platz, G+-GeoDaten';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_gplus" IS 'Platz, G+-GeoDaten';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_attr" IS 'Platz, Anzahl der Attraktivitäten';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_attr" IS 'Platz, Anzahl der Attraktivitäten';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_plz" IS 'Neue Postleitzahl, rein nummerisch';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_plz" IS 'Neue Postleitzahl, rein nummerisch';
+COMMENT ON COLUMN "public"."stadtdaten"."pl_dauer" IS 'Laufzeit des Platzes';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."pl_dauer" IS 'Laufzeit des Platzes';
+COMMENT ON COLUMN "public"."stadtdaten"."va_land" IS 'Veranstalter, Land';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."va_land" IS 'Veranstalter, Land';
+COMMENT ON COLUMN "public"."stadtdaten"."org_on_bew" IS 'Online-Bewerbung?';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."org_on_bew" IS 'Online-Bewerbung?';
+COMMENT ON COLUMN "public"."stadtdaten"."org_on_name" IS 'Begriff, der auf der Webseite gefunden wurde';
 
 
 
-COMMENT ON COLUMN "public"."Stadtdaten"."org_on_name" IS 'Begriff, der auf der Webseite gefunden wurde';
-
-
-
-ALTER TABLE "public"."Stadtdaten" ALTER COLUMN "nr" ADD GENERATED BY DEFAULT AS IDENTITY (
+ALTER TABLE "public"."stadtdaten" ALTER COLUMN "nr" ADD GENERATED BY DEFAULT AS IDENTITY (
     SEQUENCE NAME "public"."Stadtdaten_nr_seq"
     START WITH 1
     INCREMENT BY 1
@@ -695,7 +689,7 @@ CREATE TABLE IF NOT EXISTS "public"."user_events" (
 ALTER TABLE "public"."user_events" OWNER TO "postgres";
 
 
-ALTER TABLE ONLY "public"."Stadtdaten"
+ALTER TABLE ONLY "public"."stadtdaten"
     ADD CONSTRAINT "Stadtdaten_pkey" PRIMARY KEY ("nr");
 
 
@@ -744,7 +738,7 @@ CREATE UNIQUE INDEX "Platzdaten_NR_unique_idx" ON "public"."platzdaten" USING "b
 
 
 
-CREATE UNIQUE INDEX "Stadtdaten_NR_idx" ON "public"."Stadtdaten" USING "btree" ("nr");
+CREATE UNIQUE INDEX "Stadtdaten_NR_idx" ON "public"."stadtdaten" USING "btree" ("nr");
 
 
 
@@ -849,6 +843,10 @@ CREATE POLICY "Allow all for anon" ON "public"."platzdaten" USING (true) WITH CH
 
 
 
+CREATE POLICY "Allow all for anon on stadtdaten" ON "public"."stadtdaten" TO "authenticated", "anon" USING (true) WITH CHECK (true);
+
+
+
 CREATE POLICY "Allow authenticated users to insert/update help texts" ON "public"."help_texts" TO "authenticated" USING (true);
 
 
@@ -867,9 +865,6 @@ CREATE POLICY "Authenticated users can view global events" ON "public"."global_e
 
 CREATE POLICY "Enable read access for all users" ON "public"."platzdaten" FOR SELECT USING (true);
 
-
-
-ALTER TABLE "public"."Stadtdaten" ENABLE ROW LEVEL SECURITY;
 
 
 CREATE POLICY "Users can delete their own businesses" ON "public"."geschaefte" FOR DELETE USING (("auth"."uid"() = "user_id"));
@@ -978,6 +973,9 @@ ALTER TABLE "public"."platzdaten_staging" ENABLE ROW LEVEL SECURITY;
 
 
 ALTER TABLE "public"."profiles" ENABLE ROW LEVEL SECURITY;
+
+
+ALTER TABLE "public"."stadtdaten" ENABLE ROW LEVEL SECURITY;
 
 
 ALTER TABLE "public"."user_events" ENABLE ROW LEVEL SECURITY;
@@ -1258,9 +1256,9 @@ GRANT ALL ON FUNCTION "public"."set_updated_at"() TO "service_role";
 
 
 
-GRANT ALL ON TABLE "public"."Stadtdaten" TO "anon";
-GRANT ALL ON TABLE "public"."Stadtdaten" TO "authenticated";
-GRANT ALL ON TABLE "public"."Stadtdaten" TO "service_role";
+GRANT ALL ON TABLE "public"."stadtdaten" TO "anon";
+GRANT ALL ON TABLE "public"."stadtdaten" TO "authenticated";
+GRANT ALL ON TABLE "public"."stadtdaten" TO "service_role";
 
 
 

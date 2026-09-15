@@ -224,7 +224,7 @@ CREATE TABLE IF NOT EXISTS "public"."stadtdaten" (
     "futur_start" "date",
     "futur_ende" "date",
     "futur_frist" "date",
-    "int_update" timestamp with time zone,
+    "int_update" timestamp with time zone DEFAULT "now"(),
     "pl_lat" "text",
     "pl_lon" "text",
     "pl_gplus" "text",

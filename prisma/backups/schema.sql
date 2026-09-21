@@ -233,14 +233,15 @@ CREATE TABLE IF NOT EXISTS "public"."stadtdaten" (
     "pl_dauer" bigint,
     "va_land" "text",
     "org_on_bew" boolean,
-    "org_on_name" "text"
+    "org_on_name" "text",
+    "org_on_url" "text"
 );
 
 
 ALTER TABLE "public"."stadtdaten" OWNER TO "postgres";
 
 
-COMMENT ON TABLE "public"."stadtdaten" IS 'This is a duplicate of platzdaten';
+COMMENT ON TABLE "public"."stadtdaten" IS 'Stadtdaten DB für neue Daten';
 
 
 
@@ -530,7 +531,9 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten" (
     "va_land" "text",
     "org_on_bew" boolean,
     "org_on_name" "text",
-    "pl_typ" "text"
+    "pl_typ" "text",
+    "org_on_url" "text",
+    "is_referenced" boolean DEFAULT false NOT NULL
 );
 
 

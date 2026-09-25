@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict gqIMSP467uispa5fY2Lg36UXambwAl2fdP9KpRicJTAWnG8V6HyRk2SJN3gRXVs
+-- \restrict 2fo5BWqUjYT8MzQ8cPsn1HvO6jAF4nnTosI9tJL4HUKtvm3BrPctqhS2G2rZSEh
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.6
@@ -113,6 +113,7 @@ fbda3e7b-4a3d-4999-b52e-701c3a182a4a	\N	\N	\N	\N	google			2026-09-11 07:15:49.46
 2b803479-ef9c-4e03-9d43-aa48458ac8f3	\N	\N	\N	\N	google			2026-09-11 17:19:06.704315+00	2026-09-11 17:19:06.704315+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 63ef0b76-49ba-46fb-af5f-af32aefe481d	\N	\N	\N	\N	google			2026-09-11 17:19:21.635291+00	2026-09-11 17:19:21.635291+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 d8bfd42d-026c-4f20-8e58-5bced1b78a21	\N	\N	\N	\N	google			2026-09-18 18:40:53.060764+00	2026-09-18 18:40:53.060764+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
+948a030f-c5a1-48a7-8a41-2356f266fda0	\N	\N	\N	\N	google			2026-09-24 19:37:48.96543+00	2026-09-24 19:37:48.96543+00	oauth	\N	\N	https://tournee.schaustelleranfragen.de	\N	\N	f
 \.
 
 
@@ -24060,6 +24061,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_staging_nr_seq"', 1788468530735, 
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict gqIMSP467uispa5fY2Lg36UXambwAl2fdP9KpRicJTAWnG8V6HyRk2SJN3gRXVs
+-- \unrestrict 2fo5BWqUjYT8MzQ8cPsn1HvO6jAF4nnTosI9tJL4HUKtvm3BrPctqhS2G2rZSEh
 
 RESET ALL;

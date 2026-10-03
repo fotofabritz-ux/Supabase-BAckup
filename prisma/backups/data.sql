@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict jpBjBxWIYvDfVJ9L4b7nYzpWNHZNOs4SXgAnTh1XxzDSxCZq6ICfN0cV1sougCY
+-- \restrict YwsGAF5kRcuVvs94NQhVNpTKJL4G6vZZqnFxSBhBhcNUr0RNFgQitfm35gyeSDt
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.11
@@ -191,6 +191,7 @@ COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_pas
 00000000-0000-0000-0000-000000000000	c7cfdcbb-22c5-4315-92c7-84bfb7cce8cb	authenticated	authenticated	adriano-rasch@hotmail.de	$2a$10$DmkaqNbD/e/nQDoJ.FVcTuzRe9OmYuco4efZmjbVyex.vqmP9ZVii	2026-09-20 17:11:08.806903+00	\N		2026-09-20 17:10:18.404173+00	fe802082c3ec8e593997cee658187d6ae786ba1aae112561a7151dd7	2026-09-20 17:10:52.811661+00			\N	2026-09-20 17:11:08.822585+00	{"provider": "email", "providers": ["email"]}	{"sub": "c7cfdcbb-22c5-4315-92c7-84bfb7cce8cb", "email": "adriano-rasch@hotmail.de", "email_verified": true, "phone_verified": false}	\N	2026-09-20 17:10:18.354443+00	2026-09-20 17:11:08.875105+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	c61267de-05b1-4dfa-a671-3d9041e292c4	authenticated	authenticated	sharisanis@gmx.de	$2a$10$W1Av.HdLCM6paxI.TxwcguWchkCuHaecobJD0yhiXhWlQqkiCnlg6	2026-09-30 20:05:42.220668+00	\N		2026-09-30 20:05:28.616738+00		\N			\N	2026-09-30 20:05:42.247229+00	{"provider": "email", "providers": ["email"]}	{"sub": "c61267de-05b1-4dfa-a671-3d9041e292c4", "email": "sharisanis@gmx.de", "email_verified": true, "phone_verified": false}	\N	2026-09-30 20:05:28.563132+00	2026-09-30 20:05:42.304603+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	4559f065-3544-4db2-a8f2-1816b83519e2	authenticated	authenticated	shirleyjessicalauenburger@gmail.com	$2a$10$MdfORHuPWurGHhg4shbineGfuEvVVKSDbcf7XLWtpIv1rQdsaMvkm	\N	\N	811c8919c129f26e169415a2eb260ec51b7187dd11beac26b34cd8c9	2026-10-01 09:25:25.575053+00		\N			\N	\N	{"provider": "email", "providers": ["email"]}	{"sub": "4559f065-3544-4db2-a8f2-1816b83519e2", "email": "shirleyjessicalauenburger@gmail.com", "email_verified": false, "phone_verified": false}	\N	2026-10-01 09:25:25.503862+00	2026-10-01 09:25:26.161887+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	2a7cf397-cad4-49d4-ba36-c36f1581e859	authenticated	authenticated	reneklugmann0511@gmx.de	$2a$10$5rO143lkiJ0ACHvz3GIMMOBE0bYvu6Usyg7Fs3u.k8jOstX7GqTYO	2026-10-02 21:02:27.858422+00	\N		2026-10-02 21:02:12.882309+00		\N			\N	2026-10-02 21:02:27.876155+00	{"provider": "email", "providers": ["email"]}	{"sub": "2a7cf397-cad4-49d4-ba36-c36f1581e859", "email": "reneklugmann0511@gmx.de", "email_verified": true, "phone_verified": false}	\N	2026-10-02 21:02:12.825886+00	2026-10-02 21:02:27.915673+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -257,6 +258,7 @@ d420f513-686c-4182-bba9-87c3653c7af1	d420f513-686c-4182-bba9-87c3653c7af1	{"sub"
 a60a6d86-eb00-4c23-b62e-a7e7f0b3e466	a60a6d86-eb00-4c23-b62e-a7e7f0b3e466	{"sub": "a60a6d86-eb00-4c23-b62e-a7e7f0b3e466", "email": "schausteller.kirschbaum@gmx.de", "email_verified": true, "phone_verified": false}	email	2026-09-29 18:46:23.687119+00	2026-09-29 18:46:23.68717+00	2026-09-29 18:46:23.68717+00	d4725020-1ae4-4df2-a549-eccfbf759601
 c61267de-05b1-4dfa-a671-3d9041e292c4	c61267de-05b1-4dfa-a671-3d9041e292c4	{"sub": "c61267de-05b1-4dfa-a671-3d9041e292c4", "email": "sharisanis@gmx.de", "email_verified": true, "phone_verified": false}	email	2026-09-30 20:05:28.594228+00	2026-09-30 20:05:28.594756+00	2026-09-30 20:05:28.594756+00	ba7fbced-8550-4b20-a371-a9a781c95e40
 4559f065-3544-4db2-a8f2-1816b83519e2	4559f065-3544-4db2-a8f2-1816b83519e2	{"sub": "4559f065-3544-4db2-a8f2-1816b83519e2", "email": "shirleyjessicalauenburger@gmail.com", "email_verified": false, "phone_verified": false}	email	2026-10-01 09:25:25.542282+00	2026-10-01 09:25:25.54233+00	2026-10-01 09:25:25.54233+00	ca0fbba6-2e05-46cc-92db-98a169f03f95
+2a7cf397-cad4-49d4-ba36-c36f1581e859	2a7cf397-cad4-49d4-ba36-c36f1581e859	{"sub": "2a7cf397-cad4-49d4-ba36-c36f1581e859", "email": "reneklugmann0511@gmx.de", "email_verified": true, "phone_verified": false}	email	2026-10-02 21:02:12.857779+00	2026-10-02 21:02:12.857829+00	2026-10-02 21:02:12.857829+00	d1605b1d-e650-4abf-9359-368eda3425b2
 \.
 
 
@@ -354,6 +356,7 @@ b2aaf491-71d6-4914-9740-ee2044b442a1	8432b618-1422-41f5-a7e2-c4a7947fcfc7	2026-0
 67a4e59d-64ad-45ea-8a86-49dd9f5ec06e	a60a6d86-eb00-4c23-b62e-a7e7f0b3e466	2026-09-29 18:46:45.361466+00	2026-09-29 18:46:45.361466+00	\N	aal1	\N	\N	Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36	80.187.102.132	\N	\N	\N	\N	\N
 25a2eb1f-641f-4927-b54e-cf97ea5076ff	b70952f5-4f95-4832-ba38-1240b1ef3097	2026-09-29 21:12:09.156935+00	2026-09-29 21:12:09.156935+00	\N	aal1	\N	\N	Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Mobile Safari/537.36	150.5.29.127	\N	\N	\N	\N	\N
 aa2486b3-5a56-48ec-bb37-d8515b8c21b4	c61267de-05b1-4dfa-a671-3d9041e292c4	2026-09-30 20:05:42.248481+00	2026-09-30 20:05:42.248481+00	\N	aal1	\N	\N	Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/30.0 Chrome/143.0.0.0 Mobile Safari/537.36	91.46.96.138	\N	\N	\N	\N	\N
+8af1648e-7046-49af-9aa4-68044f4ad4e7	2a7cf397-cad4-49d4-ba36-c36f1581e859	2026-10-02 21:02:27.876859+00	2026-10-02 21:02:27.876859+00	\N	aal1	\N	\N	Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5.2 Mobile/15E148 Safari/604.1	80.187.126.1	\N	\N	\N	\N	\N
 \.
 
 
@@ -435,6 +438,7 @@ b2aaf491-71d6-4914-9740-ee2044b442a1	2026-09-25 18:14:29.858697+00	2026-09-25 18
 67a4e59d-64ad-45ea-8a86-49dd9f5ec06e	2026-09-29 18:46:45.409449+00	2026-09-29 18:46:45.409449+00	otp	0f613f59-8b52-4ab0-9df6-282e492f5106
 25a2eb1f-641f-4927-b54e-cf97ea5076ff	2026-09-29 21:12:09.256283+00	2026-09-29 21:12:09.256283+00	password	80365299-ebe2-4ec2-a78f-c42449c58d25
 aa2486b3-5a56-48ec-bb37-d8515b8c21b4	2026-09-30 20:05:42.308256+00	2026-09-30 20:05:42.308256+00	otp	687b1119-ec37-450e-8d03-113e88d54db0
+8af1648e-7046-49af-9aa4-68044f4ad4e7	2026-10-02 21:02:27.916274+00	2026-10-02 21:02:27.916274+00	otp	95e53fb7-f75b-492a-a6e0-45f89b10492b
 \.
 
 
@@ -727,6 +731,7 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	421	hnhv6ztl2v7d	edf3c05d-6059-4ba5-92e5-b77a55c37ff5	f	2026-09-18 21:36:05.664415+00	2026-09-18 21:36:05.664415+00	vkqiakm5vs3u	57934433-8df4-4306-8c80-15de5a6372e8
 00000000-0000-0000-0000-000000000000	437	3ss37u2pjdha	2a723f57-51a6-4767-8ddb-47df6617ccb2	t	2026-09-25 14:33:01.253693+00	2026-09-30 06:17:55.007559+00	m7rk3mhmsamm	715ad981-6543-4cc9-88c9-1096a2e1faf9
 00000000-0000-0000-0000-000000000000	422	gbgasof4mgqr	7479be9e-e84f-4dbf-8657-4f72c11bc824	t	2026-09-19 10:08:45.86679+00	2026-09-19 12:35:25.952665+00	\N	3a976793-a814-40c6-aca1-d65871bb0869
+00000000-0000-0000-0000-000000000000	462	nesfckmkhdx4	2a7cf397-cad4-49d4-ba36-c36f1581e859	f	2026-10-02 21:02:27.895446+00	2026-10-02 21:02:27.895446+00	\N	8af1648e-7046-49af-9aa4-68044f4ad4e7
 00000000-0000-0000-0000-000000000000	423	7bffgk5fpuar	7479be9e-e84f-4dbf-8657-4f72c11bc824	t	2026-09-19 12:35:25.967434+00	2026-09-19 14:16:49.525611+00	gbgasof4mgqr	3a976793-a814-40c6-aca1-d65871bb0869
 00000000-0000-0000-0000-000000000000	424	sofq6oyby6z2	7479be9e-e84f-4dbf-8657-4f72c11bc824	f	2026-09-19 14:16:49.548341+00	2026-09-19 14:16:49.548341+00	7bffgk5fpuar	3a976793-a814-40c6-aca1-d65871bb0869
 00000000-0000-0000-0000-000000000000	425	tgcmznldkqxl	d899aa03-095a-4447-8549-2a53f04fde37	t	2026-09-20 11:51:24.480732+00	2026-09-20 12:53:35.882474+00	\N	9ee9ff2d-ac67-4c56-8a01-091c43496c76
@@ -24099,7 +24104,7 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 461, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 462, true);
 
 
 --
@@ -24141,6 +24146,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_staging_nr_seq"', 1788468530735, 
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict jpBjBxWIYvDfVJ9L4b7nYzpWNHZNOs4SXgAnTh1XxzDSxCZq6ICfN0cV1sougCY
+-- \unrestrict YwsGAF5kRcuVvs94NQhVNpTKJL4G6vZZqnFxSBhBhcNUr0RNFgQitfm35gyeSDt
 
 RESET ALL;

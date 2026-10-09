@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict emUUFfaQhZe33gjRRFs0cwP8sLC3xoypillD6YEEkNdyBywTT3W5t76rNlB4F2H
+-- \restrict SOVUSZOq97z5r8SB5jYFMerb52A2ERsiU8ruLessWDBTOk6bXF4TfJVaDX8Ueqb
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.11
@@ -18996,6 +18996,8 @@ ec4e8feb-e17b-4dc2-a861-50c93b99530e	tournee@schaustelleranfragen.de	user	2026-0
 --
 
 COPY "public"."stadtdaten" ("pl_ort", "nr", "va_adresse", "kal_notiz", "int_kontrolle", "va_email", "kal_size", "pl_beschreibung", "pl_web", "va_web", "va_name", "pl_bez", "va_ort", "int_check", "pl_location", "kal_plzort", "kal_region", "pl_start", "pl_ende", "futur_start", "futur_ende", "futur_frist", "int_update", "pl_lat", "pl_lon", "pl_gplus", "pl_attr", "pl_plz", "pl_dauer", "va_land", "org_on_bew", "org_on_name", "org_on_url") FROM stdin;
+Winterberg	16076	Fichtenweg 10	Der Markt findet im Herzen der Kernstadt Winterberg statt.	KDRP	info@winterberg.de	S	Traditioneller Weihnachtsmarkt auf dem Marktplatz mit lokalem Kunsthandwerk und regionalen Spezialitäten.	https://www.winterberg.de	https://www.winterberg.de	Stadt Winterberg	Winterberger Weihnachtsmarkt	59955 Winterberg	8.10.2026	Marktplatz	\N	W	2026-12-11	2026-12-13	2027-12-10	2027-12-12	\N	2026-10-08 20:37:02.649096+00	51.1951	8.5358	8CCM+9V Winterberg	k.A.	59955	3	\N	f		\N
+Winterberg	16077	Auf der Kappe 3	Die Termine für Schützenfeste in der Region Sauerland finden meist im Juli statt.	KDRP	info@schuetzenverein-winterberg.de	M	Traditionelles Schützenfest mit Festumzug, Vogelschießen und Tanzveranstaltungen in der Schützenhalle.	https://www.schuetzenverein-winterberg.de	https://www.schuetzenverein-winterberg.de	Schützenbruderschaft St. Hubertus Winterberg e.V.	Schützenfest Winterberg	59955 Winterberg	8.10.2026	Schützenhalle / Schützenplatz	\N	W	2026-07-04	2026-07-06	2027-07-03	2027-07-05	\N	2026-10-08 20:37:02.649096+00	51.1965	8.5305	8CJP+3C Winterberg	k.A.	59955	3	\N	f		\N
 Sulzbach an der Murr	12837	Bahnhofstraße 3	ca. 7 km von Murrhardt	KDRP	bma@sulzbach-murr.de	S	Origineller vorweihnachtlicher Markt mit Walnuss-Gewinnspiel für wohltätige Zwecke, Kunsthandwerk, Kinderaktionen und abendlicher Weihnachtsparty.	https://vds-sulzbach.de	https://www.sulzbach-murr.de	Verein der Selbständigen Sulzbach/Murr & Gemeinde	Nussknackermarkt Sulzbach an der Murr	71560 Sulzbach an der Murr	31.8.2026	Marktplatz	71560-71560 Sulzbach an der Murr	S	2026-11-21	2026-11-21	2027-11-20	2027-11-20	2027-09-30	\N	49.0035	9.4975	2FRX+9X Sulzbach an der Murr	30	71560	1	\N	f		\N
 Heitersheim	12820	Hauptstraße 9	ca. 8 km von Müllheim im Markgräflerland	KDRP	stadt@heitersheim.de	M	Historischer Bartholomäus- und Kirchweihmarkt mit bunten Verkaufsbuden, Gastronomiehöfen und Unterhaltungsangeboten.	https://www.heitersheim.de	https://www.heitersheim.de	Stadtverwaltung Heitersheim	Chilbi-Markt Heitersheim	Heitersheim	31.8.2026	Ortszentrum & Hauptstraße	79423-Heitersheim	S	2026-08-31	2026-08-31	2027-08-30	2027-08-30	2027-06-15	\N	47.8744	7.6533	VJFX+Q8 Heitersheim	10	79423	1	\N	f		\N
 Haslach im Kinzigtal	12660	Am Marktplatz 1	ca. 25 km von Lahr/Schwarzwald	KDRP	info@haslach.de	M	Jahrhundertealter Traditions- und Jahrmarkt am Nikolaustag mit über 100 Markt- und Kirmesständen in den malerischen Gassen der denkmalgeschützten Fachwerk-Altstadt.	https://www.haslach.de	https://www.haslach.de	Stadt Haslach im Kinzigtal	Haslacher Kläslemarkt (Nikolaus- und Jahrmarkt)	77716 Haslach im Kinzigtal	31.8.2026	Historische Altstadt, Marktplatz & Hauptstraße	77716-77716 Haslach im Kinzigtal	S	2026-12-04	2026-12-04	2027-12-03	2027-12-03	2027-10-15	\N	48.2778	8.0872	8FVH73HP+4V	100	77716	1	\N	f		\N
@@ -19011,449 +19013,301 @@ Rheine	11870	Klosterstraße 14	ca. 20 km von Ibbenbüren	KDRP	nicola.moz@rheine.
 Warendorf	11878	Markt 1	ca. 45 km von Ibbenbüren	KDRP	marktmeisterin@warendorf.de	L	Großes Volksfest mit über 365 Jahren Geschichte, Kirmes auf der Linnenwiese, Altstadttrödel und traditionellem Fettmarktmittwoch.	https://www.fettmarkt.com	https://www.warendorf.de	Stadt Warendorf - Kulturamt & Marktwesen	Fettmarkt Kirmes	Warendorf	29.8.2026	Festplatz Lohwall / Linnenwiese	48231-Warendorf	W	2026-10-17	2026-10-21	\N	\N	\N	\N	51.9542	7.9897	9F37XX3Q+MW	100	48231	\N	\N	t	online	\N
 Vechta	11880	Burgstraße 6	ca. 73 km von Ibbenbüren	KDRP	marktverwaltung@vechta.de	XL	Kult-Großvolksfest im Nordwesten mit über 700 Jahren Geschichte, mehr als 500 Schaustellern und über 800.000 Besuchern.	https://www.stoppelmarkt.de	https://www.vechta.de	Stadt Vechta - Marktverwaltung	Stoppelmarkt	Vechta	29.8.2026	Stoppelmarkt-Gelände Westerheide	49377-Vechta	N	2026-08-13	2026-08-18	2027-08-12	2027-08-17	2026-10-30	\N	52.7483	8.2933	9F48P7XU+88	500	49377	\N	\N	t	online	\N
 Wetzlar	14699	Frankfurter Straße 113	ca. 19 km von Herborn	KDRP	mail@landwirtschaftlicherverein-wetzlar.de	XL	Größtes Volksfest Mittelhessens (im 3-Jahres-Turnus) mit riesigem Vergnügungspark, großer Tierschau, Festzelten und Gewerbeausstellung.	https://www.ochsenfest-wetzlar.de	https://www.landwirtschaftlicherverein-wetzlar.de	Landwirtschaftlicher Verein Lahn-Dill von 1832 e.V.	Wetzlarer Ochsenfest	35578 Wetzlar	10.9.2026	Festplatz Finsterloh	35578-35578 Wetzlar	W	\N	\N	2027-07-01	2027-07-05	2026-12-31	\N	50.5487	8.5098	GFX5+FW Wetzlar	40	35578	\N	\N	f		\N
-Engelstadt	11246	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Frankenthal (Pfalz)	11247	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Freinsheim	11248	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gau-Algesheim	11249	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Germersheim	11250	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gerolstein	11251	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Grünstadt	11252	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hachenburg	11253	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hagenbach	11254	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Herdorf	11255	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hermeskeil	11256	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hillesheim	11257	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hochstadt (Pfalz)	11258	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Höhr-Grenzhausen	11259	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hornbach	11260	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Idar-Oberstein	11261	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ingelheim am Rhein	11262	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kaisersesch	11263	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kaiserslautern	11264	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kallstadt	11265	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kandel	11266	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kastellaun	11267	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Katzenelnbogen	11268	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kaub	11269	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kirchberg (Hunsrück)	11270	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kirchen (Sieg)	11271	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kirchheimbolanden	11272	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kirn	11273	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Koblenz	11274	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Konz	11275	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kusel	11276	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kyllburg	11277	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lahnstein	11278	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lambrecht (Pfalz)	11279	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Landau in der Pfalz	11280	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Landstuhl	11281	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lauterecken	11282	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Linz am Rhein	11283	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ludwigshafen am Rhein	11284	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lustadt	11285	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mainz	11286	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Manderscheid	11287	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mayen	11288	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Meisenheim	11289	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mendig	11290	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Montabaur	11291	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mörstadt	11292	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mülheim-Kärlich	11293	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Münstermaifeld	11294	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mutterstadt	11295	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nassau	11296	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nastätten	11297	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neuerburg	11298	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neustadt (Wied)	11299	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neustadt/ Westerwald	11301	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neuwied	11302	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nieder-Olm	11303	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Niederstadtfeld	11304	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nierstein	11305	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Obermoschel	11306	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oberstadtfeld	11307	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oberwesel	11308	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oppenheim	11309	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Osthofen	11310	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Otterberg	11311	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Otterstadt	11312	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pirmasens	11313	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Polch	11314	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Prüm	11315	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ramstein-Miesenbach	11316	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ransbach-Baumbach	11317	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Remagen	11318	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rennerod	11319	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rheinböllen	11320	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rhens	11321	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rockenhausen	11322	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rodalben	11323	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Saalstadt	11324	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Saarburg	11325	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sankt Goar	11326	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sankt Goarshausen	11327	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schifferstadt	11328	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schweich	11329	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Selters (Westerwald)	11330	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Simmern/ Hunsrück	11331	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sinzig	11332	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Speicher	11333	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Speyer	11334	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stromberg	11335	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Traben-Trarbach	11336	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Trier	11337	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Trippstadt	11338	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ulmen	11339	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Unkel	11340	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Vallendar	11341	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Waldmohr	11343	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Weißenthurm	11344	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Westerburg	11345	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wirges	11346	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wissen	11347	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wittlich	11348	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wolfstein	11349	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Worms	11350	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wörrstadt	11351	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wörth am Rhein	11352	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zell (Mosel)	11353	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zweibrücken	11354	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bexbach	11355	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Blieskastel	11356	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dillingen/ Saar	11357	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Friedrichsthal	11358	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Homburg	11359	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lebach	11360	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Merzig	11361	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neunkirchen	11362	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ottweiler	11363	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Püttlingen	11364	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Saarbrücken	11365	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Saarlouis	11366	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-St. Ingbert	11367	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-St. Wendel	11368	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sulzbach/ Saar	11369	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Völklingen	11370	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wadern	11371	Saarland	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Adorf/Vogtl.	11372	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Altenberg	11373	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Annaberg-Buchholz	11374	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Aue-Bad Schlema	11375	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Auerbach/Vogtl.	11376	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Augustusburg	11377	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Düben	11378	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Elster	11379	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Gottleuba-Berggießhübel	11380	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Lausick	11381	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Muskau	11382	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Schandau	11383	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bautzen / Budyšin	11384	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Belgern-Schildau	11385	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bernsdorf	11386	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bernstadt a. d. Eigen	11387	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bischofswerda	11388	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Böhlen	11389	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Borna	11390	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Brand-Erbisdorf	11391	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Brandis	11392	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Burgstädt	11393	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Chemnitz	11394	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Colditz	11395	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Coswig	11396	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Crimmitschau	11397	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dahlen	11398	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Delitzsch	11399	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Döbeln	11401	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dohna	11402	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dommitzsch	11403	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dresden	11404	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ebersbach-Neugersdorf	11405	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ehrenfriedersdorf	11406	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eibenstock	11407	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eilenburg	11408	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Elsterberg	11409	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Elstra / Halštrow	11410	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Elterlein	11411	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Falkenstein/Vogtl.	11412	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Flöha	11413	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Frankenberg/Sa.	11414	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Frauenstein	11415	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Freiberg	11416	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Freital	11417	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Frohburg	11418	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Geithain	11419	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Geringswalde	11420	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Geyer	11421	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Glashütte	11422	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Glauchau	11423	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Görlitz	11424	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Grimma	11425	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gröditz	11426	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Groitzsch	11427	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Großenhain	11428	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Großröhrsdorf	11429	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Großschirma	11430	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Grünhain-Beierfeld	11431	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hainichen	11432	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hartenstein	11433	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hartha	11434	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Heidenau	11435	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Herrnhut	11436	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hohenstein-Ernstthal	11437	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hohnstein	11438	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hoyerswerda	11439	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Johanngeorgenstadt	11440	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Jöhstadt	11441	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kamenz / Kamjenc	11442	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kirchberg	11443	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kitzscher	11444	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Klingenthal	11445	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Königsbrück	11446	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Königstein/Sächs. Schw.	11447	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lauter-Bernsbach	11449	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Leisnig	11451	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lengenfeld	11452	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lichtenstein/Sa.	11453	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Liebstadt	11454	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Limbach-Oberfrohna	11455	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Löbau	11456	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lommatzsch	11457	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lößnitz	11458	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lugau/Erzgeb.	11459	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lunzenau	11460	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Marienberg	11461	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Markkleeberg	11462	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Markneukirchen	11463	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Markranstädt	11464	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Meerane	11465	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Meißen	11466	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mittweida	11467	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mügeln	11468	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Naunhof	11469	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Netzschkau	11470	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neusalza-Spremberg	11471	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neustadt in Sachsen	11472	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neustadt/Vogtl.	11473	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Niesky	11474	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nossen	11475	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oberlungwitz	11476	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oberwiesenthal	11477	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oederan	11478	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oelsnitz/Erzgeb.	11479	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oelsnitz/Vogtl.	11480	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Olbernhau	11481	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oschatz	11482	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ostritz	11483	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pausa-Mühltroff	11484	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pegau	11485	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Penig	11486	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pirna	11487	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Plauen	11488	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pockau-Lengefeld	11489	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pulsnitz	11490	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rabenau	11491	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Radeberg	11492	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Radebeul	11493	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Radeburg	11494	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Regis-Breitingen	11495	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Reichenbach im Vogtland	11496	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Reichenbach/O.L.	11497	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Riesa	11498	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rochlitz	11499	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Roßwein	11501	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rötha	11502	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rothenburg/O.L.	11503	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sayda	11504	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Scheibenberg	11505	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schirgiswalde-Kirschau	11506	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schkeuditz	11507	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schlettau	11508	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schneeberg	11509	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Frankenthal (Pfalz)	11247	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gau-Algesheim	11249	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gerolstein	11251	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Grünstadt	11252	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hagenbach	11254	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Herdorf	11255	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hermeskeil	11256	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hochstadt (Pfalz)	11258	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Höhr-Grenzhausen	11259	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hornbach	11260	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ingelheim am Rhein	11262	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kaisersesch	11263	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kaiserslautern	11264	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kandel	11266	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kastellaun	11267	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Katzenelnbogen	11268	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kirchberg (Hunsrück)	11270	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kirchen (Sieg)	11271	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kirn	11273	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Koblenz	11274	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Konz	11275	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kusel	11276	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lahnstein	11278	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lambrecht (Pfalz)	11279	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Landstuhl	11281	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lauterecken	11282	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Linz am Rhein	11283	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lustadt	11285	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mainz	11286	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Manderscheid	11287	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mayen	11288	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mendig	11290	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Montabaur	11291	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mülheim-Kärlich	11293	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Münstermaifeld	11294	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mutterstadt	11295	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nassau	11296	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neuerburg	11298	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neustadt (Wied)	11299	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neuwied	11302	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nieder-Olm	11303	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Niederstadtfeld	11304	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Obermoschel	11306	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oberstadtfeld	11307	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oberwesel	11308	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Osthofen	11310	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Otterberg	11311	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Otterstadt	11312	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Polch	11314	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Prüm	11315	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ramstein-Miesenbach	11316	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Remagen	11318	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rennerod	11319	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rheinböllen	11320	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rockenhausen	11322	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rodalben	11323	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Saalstadt	11324	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sankt Goar	11326	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sankt Goarshausen	11327	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schweich	11329	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Selters (Westerwald)	11330	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Simmern/ Hunsrück	11331	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sinzig	11332	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Speyer	11334	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stromberg	11335	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Trippstadt	11338	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ulmen	11339	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Vallendar	11341	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Waldmohr	11343	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Westerburg	11345	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wirges	11346	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wissen	11347	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wolfstein	11349	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Worms	11350	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wörrstadt	11351	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zell (Mosel)	11353	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zweibrücken	11354	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bexbach	11355	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dillingen/ Saar	11357	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Friedrichsthal	11358	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Homburg	11359	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Merzig	11361	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neunkirchen	11362	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Püttlingen	11364	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Saarbrücken	11365	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+St. Ingbert	11367	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+St. Wendel	11368	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sulzbach/ Saar	11369	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wadern	11371	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Adorf/Vogtl.	11372	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Altenberg	11373	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Aue-Bad Schlema	11375	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Auerbach/Vogtl.	11376	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Düben	11378	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Elster	11379	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Lausick	11381	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Muskau	11382	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Schandau	11383	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bautzen / Budyšin	11384	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bernsdorf	11386	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bernstadt a. d. Eigen	11387	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bischofswerda	11388	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Borna	11390	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Brand-Erbisdorf	11391	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Brandis	11392	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Chemnitz	11394	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Colditz	11395	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Crimmitschau	11397	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dahlen	11398	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Döbeln	11401	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dohna	11402	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dommitzsch	11403	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ebersbach-Neugersdorf	11405	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ehrenfriedersdorf	11406	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eilenburg	11408	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Elsterberg	11409	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Elterlein	11411	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Falkenstein/Vogtl.	11412	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Flöha	11413	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Frauenstein	11415	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Freiberg	11416	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Freital	11417	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Geithain	11419	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Geringswalde	11420	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Geyer	11421	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Glauchau	11423	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Görlitz	11424	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gröditz	11426	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Groitzsch	11427	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Großröhrsdorf	11429	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Großschirma	11430	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Grünhain-Beierfeld	11431	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hartenstein	11433	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hartha	11434	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Heidenau	11435	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hohenstein-Ernstthal	11437	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hohnstein	11438	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Johanngeorgenstadt	11440	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Jöhstadt	11441	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kirchberg	11443	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kitzscher	11444	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Schöneck/Vogtl.	11510	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schwarzenberg/Erzgeb.	11511	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sebnitz	11512	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Seifhennersdorf	11513	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stadt Wehlen	11514	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stollberg/Erzgeb.	11515	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stolpen	11516	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Strehla	11517	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Taucha	11518	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Thalheim/Erzgeb.	11519	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Tharandt	11520	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Thum	11521	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Torgau	11522	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Trebsen/Mulde	11523	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Treuen	11524	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Waldenburg	11525	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Waldheim	11526	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Weißenberg	11527	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Weißwasser/O.L. 	11528	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Werdau	11529	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wildenfels	11530	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wilkau-Haßlau	11531	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wilsdruff	11532	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wilthen	11533	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wittichenau / Kulow	11534	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wolkenstein	11535	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wurzen	11536	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zittau	11537	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zschopau	11538	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zwenkau	11539	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zwickau	11540	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zwönitz	11541	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Aken (Elbe)	11542	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Allstedt	11543	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Alsleben (Saale)	11544	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Annaburg	11545	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Arendsee (Altmark)	11546	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Arneburg	11547	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Arnstein	11548	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Aschersleben	11549	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Bibra	11550	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Dürrenberg	11551	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Bad Lauchstädt	11552	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Schmiedeberg	11553	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ballenstedt	11554	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Barby	11555	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bernburg (Saale)	11556	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bismark (Altmark)	11557	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bitterfeld-Wolfen	11558	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Blankenburg (Harz)	11559	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Braunsbedra	11560	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Königsbrück	11446	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lauter-Bernsbach	11449	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Leisnig	11451	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lengenfeld	11452	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Liebstadt	11454	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Limbach-Oberfrohna	11455	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Löbau	11456	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lößnitz	11458	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lugau/Erzgeb.	11459	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lunzenau	11460	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Markkleeberg	11462	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Markneukirchen	11463	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Meerane	11465	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Meißen	11466	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mittweida	11467	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Naunhof	11469	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Netzschkau	11470	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neustadt in Sachsen	11472	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neustadt/Vogtl.	11473	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Niesky	11474	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oberlungwitz	11476	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oberwiesenthal	11477	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oelsnitz/Erzgeb.	11479	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oelsnitz/Vogtl.	11480	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oschatz	11482	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ostritz	11483	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pausa-Mühltroff	11484	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Penig	11486	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pirna	11487	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Plauen	11488	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pulsnitz	11490	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rabenau	11491	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Radebeul	11493	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Radeburg	11494	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Reichenbach im Vogtland	11496	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Reichenbach/O.L.	11497	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Riesa	11498	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rochlitz	11499	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rötha	11502	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rothenburg/O.L.	11503	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Scheibenberg	11505	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schirgiswalde-Kirschau	11506	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schlettau	11508	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schneeberg	11509	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schwarzenberg/Erzgeb.	11511	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Seifhennersdorf	11513	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stadt Wehlen	11514	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stolpen	11516	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Strehla	11517	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Taucha	11518	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Tharandt	11520	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Thum	11521	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Torgau	11522	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Waldenburg	11525	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Waldheim	11526	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Weißenberg	11527	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Werdau	11529	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wildenfels	11530	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wilsdruff	11532	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wilthen	11533	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wittichenau / Kulow	11534	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wurzen	11536	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zittau	11537	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zschopau	11538	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zwickau	11540	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zwönitz	11541	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Allstedt	11543	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Alsleben (Saale)	11544	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Arendsee (Altmark)	11546	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Arneburg	11547	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Arnstein	11548	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Bibra	11550	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Dürrenberg	11551	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ballenstedt	11554	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Barby	11555	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Burg	11561	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Calbe (Saale)	11562	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Coswig (Anhalt)	11563	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dessau-Roßlau	11564	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eckartsberga	11565	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Egeln	11566	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eisleben	11567	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Falkenstein/Harz	11568	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Freyburg (Unstrut)	11569	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gardelegen	11570	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Genthin	11571	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gerbstedt	11572	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gommern	11573	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gräfenhainichen	11574	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Gröningen	11575	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Güsten	11576	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Halberstadt	11577	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Haldensleben	11578	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Halle (Saale)	11579	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Harzgerode	11580	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Havelberg	11581	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hecklingen	11582	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hettstedt	11583	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Hohenmölsen	11584	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ilsenburg (Harz)	11585	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Jerichow	11586	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Jessen (Elster)	11587	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kalbe (Milde)	11588	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kelbra (Kyffhäuser)	11589	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kemberg	11590	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Klötze	11591	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Könnern	11592	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Köthen (Anhalt)	11593	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kroppenstedt	11594	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Landsberg	11595	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Laucha an der Unstrut	11596	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Leuna	11597	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lützen	11598	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Magdeburg	11599	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mansfeld	11600	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Merseburg	11601	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Möckern	11602	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mücheln (Geiseltal)	11603	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Naumburg (Saale)	11604	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nebra (Unstrut)	11605	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nienburg (Saale)	11606	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oberharz am Brocken	11607	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oebisfelde-Weferlingen	11608	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oranienbaum-Wörlitz	11609	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oschersleben (Bode)	11610	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Osterburg (Altmark)	11611	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Osterfeld	11612	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Osterwieck	11613	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Quedlinburg	11614	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Querfurt	11615	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Raguhn-Jeßnitz	11616	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Salzwedel	11617	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sandau (Elbe)	11618	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sandersdorf-Brehna	11619	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Sangerhausen	11620	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schönebeck (Elbe)	11621	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schraplau	11622	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Schwanebeck	11623	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Seehausen (Altmark)	11624	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Seeland	11625	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Staßfurt	11626	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stendal	11627	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Stößen	11628	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Südliches Anhalt	11629	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Tangerhütte	11630	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Tangermünde	11631	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Teuchern	11632	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Thale	11633	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wanzleben-Börde	11634	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wegeleben	11635	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Weißenfels	11636	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Werben (Elbe)	11637	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wernigerode	11638	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wettin-Löbejün	11639	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wittenberg	11640	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wolmirstedt	11641	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zahna-Elster	11642	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zeitz	11643	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zerbst/Anhalt	11644	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zörbig	11645	Sachsen-Anhalt	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ahrensburg	11646	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Arnis	11647	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Bramstedt	11648	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Oldesloe	11649	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Schwartau	11650	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Segeberg	11651	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bargteheide	11652	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Barmstedt	11653	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bredstedt	11654	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Brunsbüttel	11655	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Büdelsdorf	11656	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eckernförde	11657	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Elmshorn	11658	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eutin	11659	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Fehmarn	11660	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Garding	11663	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Geesthacht	11664	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Glinde	11665	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Glücksburg (Ostsee)	11666	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Glückstadt	11667	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Heide	11668	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Heiligenhafen	11669	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Husum	11670	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Itzehoe	11671	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kaltenkirchen	11672	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kappeln	11673	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kellinghusen	11674	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Kiel	11675	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Krempe	11676	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lauenburg/ Elbe	11677	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lübeck	11678	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lütjenburg	11679	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Marne	11680	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Meldorf	11681	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Mölln	11682	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neumünster	11683	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Neustadt in Holstein	11684	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Niebüll	11685	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Norderstedt	11686	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Nortorf	11687	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Oldenburg in Holstein	11688	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Pinneberg	11689	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Plön	11690	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Preetz	11691	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Quickborn	11692	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ratzeburg	11693	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Reinbek	11694	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Reinfeld (Holstein)	11695	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Rendsburg	11696	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bitterfeld-Wolfen	11558	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Blankenburg (Harz)	11559	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Braunsbedra	11560	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Coswig (Anhalt)	11563	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dessau-Roßlau	11564	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Egeln	11566	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eisleben	11567	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Falkenstein/Harz	11568	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gardelegen	11570	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Genthin	11571	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gerbstedt	11572	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gräfenhainichen	11574	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gröningen	11575	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Halberstadt	11577	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Haldensleben	11578	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Harzgerode	11580	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Havelberg	11581	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hecklingen	11582	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hohenmölsen	11584	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ilsenburg (Harz)	11585	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Jerichow	11586	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kalbe (Milde)	11588	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kelbra (Kyffhäuser)	11589	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Klötze	11591	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Könnern	11592	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kroppenstedt	11594	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Landsberg	11595	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Laucha an der Unstrut	11596	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Leuna	11597	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Magdeburg	11599	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mansfeld	11600	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Möckern	11602	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mücheln (Geiseltal)	11603	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nebra (Unstrut)	11605	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nienburg (Saale)	11606	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oberharz am Brocken	11607	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oranienbaum-Wörlitz	11609	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oschersleben (Bode)	11610	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Osterburg (Altmark)	11611	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Osterwieck	11613	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Quedlinburg	11614	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Raguhn-Jeßnitz	11616	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Salzwedel	11617	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sandau (Elbe)	11618	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sangerhausen	11620	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schönebeck (Elbe)	11621	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schraplau	11622	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Seehausen (Altmark)	11624	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Seeland	11625	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stendal	11627	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stößen	11628	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Südliches Anhalt	11629	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Tangermünde	11631	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Teuchern	11632	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Thale	11633	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wegeleben	11635	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Weißenfels	11636	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wernigerode	11638	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wettin-Löbejün	11639	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wittenberg	11640	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zahna-Elster	11642	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zeitz	11643	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zerbst/Anhalt	11644	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ahrensburg	11646	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Arnis	11647	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Oldesloe	11649	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Schwartau	11650	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bargteheide	11652	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Barmstedt	11653	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bredstedt	11654	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Büdelsdorf	11656	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eckernförde	11657	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Elmshorn	11658	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Fehmarn	11660	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Schenefeld	11697	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Schleswig	11698	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Schwarzenbek	11699	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
@@ -19477,10 +19331,6 @@ Bad Berka	11716	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\
 Bad Blankenburg	11717	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Bad Frankenhausen/Kyffhäuser	11718	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Bad Köstritz	11719	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Langensalza	11720	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Liebenstein	11721	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Lobenstein	11722	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Salzungen	11723	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Bad Sulza	11724	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Bad Tennstedt	11725	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Beinerstadt	11726	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
@@ -19525,6 +19375,33 @@ Königsee	11764	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\
 Leutenberg	11770	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Lucka	11771	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Magdala	11772	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Glinde	11665	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Glücksburg (Ostsee)	11666	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Glückstadt	11667	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Heiligenhafen	11669	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Husum	11670	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kaltenkirchen	11672	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kappeln	11673	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kellinghusen	11674	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Krempe	11676	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lauenburg/ Elbe	11677	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lübeck	11678	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Marne	11680	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Meldorf	11681	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neumünster	11683	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neustadt in Holstein	11684	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Niebüll	11685	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nortorf	11687	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oldenburg in Holstein	11688	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pinneberg	11689	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Preetz	11691	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Quickborn	11692	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Reinbek	11694	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Reinfeld (Holstein)	11695	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rendsburg	11696	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Liebenstein	11721	Thüringen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Lobenstein	11722	Thüringen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Salzungen	11723	Thüringen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Meiningen	11773	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Meuselwitz	11774	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Mühlhausen/Thüringen	11775	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
@@ -19601,7 +19478,6 @@ Kempten (Allgäu)	11845	Sandstraße 10	ca. 30 km von Isny im Allgäu	KDRP	maerkt
 Kempten (Allgäu)	11846	Sandstraße 10	ca. 30 km von Isny im Allgäu	KDRP	maerkte@kempten.de	M	Herbstlicher Jahrmarkt mit Vergnügungspark auf dem Königsplatz sowie traditionsreichem Händlermarkt rund um den Hildegardplatz.	https://kempten.de/jahrmarkt-4740.html	https://kempten.de	Kempten Messe- und Veranstaltungs-Betrieb	Kemptener Kathreinemarkt	Kempten (Allgäu)	29.8.2026	Königsplatz & Hildegardplatz	87435-Kempten (Allgäu)	S	2026-10-23	2026-10-31	2027-10-22	2027-10-30	\N	\N	47.7241	10.3175	P8F9+J2 Kempten (Allgäu)	k.A.	87435	\N	\N	f		\N
 Memmingen	11847	Marktplatz 1	ca. 45 km von Isny im Allgäu	KDRP	ordnungswesen@memmingen.de	L	Großer Innenstadtjahrmarkt und Vergnügungspark mit über 200 Schaustellerbetrieben sowie traditionellem dreitägigem Krämermarkt.	https://www.memmingen.de	https://www.memmingen.de	Stadt Memmingen - Amt für Gewerbe- und Marktwesen	Memminger Jahrmarkt	Memmingen	29.8.2026	Innenstadt / St.-Josefs-Kirchplatz / Westertorplatz	87700-Memmingen	S	2026-10-10	2026-10-18	2027-10-09	2027-10-17	\N	\N	47.9863	10.1802	X5PJ+G3 Memmingen	ca. 200	87700	\N	\N	f		\N
 Weingarten	11851	Kirchstraße 1	ca. 38 km von Isny im Allgäu	KDRP	info@welfenfest.de	M	Größtes Schüler- und Heimatfest in Weingarten mit Vergnügungspark auf dem Festplatz, Welfentheater und historischem Festumzug.	https://www.welfenfest.de	https://www.welfenfest.de	Welfenfestkommission Weingarten e.V.	Welfenfest Weingarten	Weingarten	29.8.2026	Festplatz Weingarten	88250-Weingarten	S	2026-07-10	2026-07-14	2027-07-09	2027-07-13	\N	\N	47.8082	9.6416	RJ5R+7M Weingarten	k.A.	88250	\N	\N	f		\N
-Drolshagen	10991	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Kaufbeuren	11852	Spitalstraße 2	ca. 65 km von Isny im Allgäu	KDRP	info@taenzelfest.de	L	Bayerns ältestes historisches Kinderfest mit Vergnügungspark und Festzeltbetrieb auf dem Tänzelfestplatz, Lagerleben und Festumzug.	https://www.taenzelfest.de	https://www.taenzelfest.de	Tänzelfestverein Kaufbeuren e.V.	Tänzelfest Kaufbeuren	Kaufbeuren	29.8.2026	Tänzelfestplatz / Innenstadt	87600-Kaufbeuren	S	2026-07-09	2026-07-20	2027-07-08	2027-07-19	\N	\N	47.8804	10.6218	VJCJ+5P Kaufbeuren	k.A.	87600	\N	\N	f		\N
 Münster	11853	Klemensstraße 10	in Münster	KDRP	32_send@stadt-muenster.de	XL	Größtes Volksfest des Münsterlandes auf dem Schlossplatz, das die Kirmessaison mit Fahrgeschäften und Feuerwerk eröffnet.	https://www.stadt-muenster.de/send/startseite	https://www.stadt-muenster.de	Stadt Münster - Ordnungsamt	Frühjahrssend Münster	Münster	29.8.2026	Schlossplatz	48149-Münster	M	2026-03-07	2026-03-15	2027-04-03	2027-04-11	2026-11-15	\N	51.9637	7.6131	9F38XJ77+F6	ca. 190	48149	\N	\N	f		\N
 Münster	11854	Klemensstraße 10	in Münster	KDRP	32_send@stadt-muenster.de	XL	Die sommerliche Ausgabe des traditionsreichen Send-Volksfestes direkt vor der Schlosskulisse mit großem Freitag-Feuerwerk.	https://www.stadt-muenster.de/send/startseite	https://www.stadt-muenster.de	Stadt Münster - Ordnungsamt	Sommersend Münster	Münster	29.8.2026	Schlossplatz	48149-Münster	M	2026-07-16	2026-07-20	2027-07-15	2027-07-19	2026-11-15	\N	51.9637	7.6131	9F38XJ77+F6	ca. 190	48149	\N	\N	f		\N
@@ -19617,7 +19493,7 @@ Georgsmarienhütte	11873	Oeseder Straße 85	ca. 28 km von Ibbenbüren	KDRP	i.wol
 Münster	11874	Klemensstraße 10	ca. 35 km von Ibbenbüren	KDRP	32_send@stadt-muenster.de	XL	Münsters größtes Volksfest eröffnet im Frühjahr auf dem Schlossplatz die Saison mit Fahrgeschäften aller Art und traditionellem Pottmarkt.	https://www.stadt-muenster.de/send	https://www.stadt-muenster.de	Stadt Münster - Ordnungsamt	Frühjahrssend Münster	Münster	29.8.2026	Schlossplatz Münster	48149-Münster	W	2026-03-07	2026-03-15	2027-04-03	2027-04-11	\N	\N	51.9639	7.6133	9F37XJ77+H8	ca. 200	48149	\N	\N	f		\N
 Münster	11875	Klemensstraße 10	ca. 35 km von Ibbenbüren	KDRP	32_send@stadt-muenster.de	XL	Der Herbstsend auf dem Schlossplatz lockt Hunderttausende Besucher mit modernsten Karussells, Pottmarkt und Sendfeuerwerk.	https://www.stadt-muenster.de/send	https://www.stadt-muenster.de	Stadt Münster - Ordnungsamt	Herbstsend Münster	Münster	29.8.2026	Schlossplatz Münster	48149-Münster	W	2026-10-24	2026-11-01	2027-10-23	2027-10-31	\N	\N	51.9639	7.6133	9F37XJ77+H8	ca. 200	48149	\N	\N	f		\N
 Telgte	11876	Baßfeld 4-6	ca. 36 km von Ibbenbüren	KDRP	stefan.reiser@telgte.de	M	Jahrhundertealter Traditionsmarkt mit Kirmes, großem Kram- und Pferdemarkt, Reitturnier und Höhenfeuerwerk.	https://www.telgte.de	https://www.telgte.de	Städtische Wirtschaftsbetriebe Telgte GmbH	Mariä-Geburts-Markt	Telgte	29.8.2026	Planwiese Telgte	48291-Telgte	W	2026-09-11	2026-09-15	\N	\N	2027-02-28	\N	51.9844	7.7850	9F37XQMP+Q2	ca. 80	48291	\N	\N	f		\N
-Rösrath	11144	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Drolshagen	10991	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Melle	11877	Schürenkamp 16	ca. 45 km von Ibbenbüren	KDRP	info@gesmolder-kirmes.de	L	Das größte Volksfest im Grönegau mit über 500-jähriger Tradition, Markttreiben und Fahrgeschäften im gesamten Ortskern.	https://www.gesmolder-kirmes.de	https://www.melle.info	Stadt Melle - Ortsrat Gesmold	Gesmolder Kirmes	Melle	29.8.2026	Festplatz Gesmold / Gesmolder Straße	49326-Melle	N	2026-09-19	2026-09-21	\N	\N	\N	\N	52.2136	8.2778	9F48677H+C4	ca. 120	49326	\N	\N	f		\N
 Aalen	11881	Marktplatz 30	Direkt in Aalen (Zentrum)	KDRP	kulturamt@aalen.de	L	Größtes Stadt- und Volksfest im Ostalbkreis mit Festmeile, Jahrmarkttreiben, Fahrgeschäften und mehreren Live-Bühnen.	https://www.aalen-kultur.de/reichsstaedter-tage	https://www.aalen.de	Stadt Aalen - Kultur- und Presseamt	Reichsstädter Tage Aalen	73430 Aalen	29.8.2026	Innenstadt / Marktplatz / Gmünder Torplatz	73430-73430 Aalen	S	2026-09-11	2026-09-13	2027-09-10	2027-09-12	2027-01-15	\N	48.8378	10.0936	8FWPFRQW+4C	ca. 25	73430	3	\N	f		\N
 Aalen	11882	Marktplatz 30	Direkt in Aalen	KDRP	kulturamt@aalen.de	M	Traditioneller Weihnachtsmarkt auf dem Spritzenhausplatz mit Kunsthandwerkshütten, Kinderkarussell und regionalen Spezialitäten.	https://www.aalen-kultur.de/reichsstaedter-advent	https://www.aalen.de	Stadt Aalen - Kultur- und Presseamt	Reichsstädter Advent Aalen (Aalener Weihnachtsmarkt)	73430 Aalen	29.8.2026	Spritzenhausplatz & Sparkassenplatz	73430-73430 Aalen	S	2026-11-25	2026-12-22	2027-11-24	2027-12-22	2027-06-30	\N	48.8375	10.0950	8FWPFRQW+2X	ca. 5	73430	28	\N	f		\N
@@ -19631,58 +19507,59 @@ Schwäbisch Gmünd	11889	Marktplatz 1	ca. 22 km westlich von Aalen	KDRP	tourist-
 Schwäbisch Hall	11890	Am Markt 9	ca. 42 km nordwestlich von Aalen	KDRP	touristik@schwaebischhall.de	L	Über 800 Jahre alter Traditionsmarkt mit großem Vergnügungspark auf den Kocherwiesen und weitläufigem Krämermarkt am Haalplatz.	https://www.schwaebischhall.de/de/kultur-tourismus/feste-highlights/jakobimarkt	https://www.schwaebischhall.de	Stadt Schwäbisch Hall - Fachbereich Kultur & Touristik	Jakobimarkt Schwäbisch Hall	74523 Schwäbisch Hall	29.8.2026	Kocherwiese Steinbach & Haalplatz	74523-74523 Schwäbisch Hall	S	2026-07-24	2026-07-27	2027-07-23	2027-07-26	2026-12-31	\N	49.1023	9.7422	8FXP4P2R+WW	ca. 30	74523	4	\N	f		\N
 Göppingen	11891	Hauptstraße 1	ca. 43 km südwestlich von Aalen	KDRP	kultur@goeppingen.de	L	Seit 1650 gefeiertes Heimat- und Traditionsvolksfest mit Festumzug, Festzeltbetrieb, Fahrgeschäften und Feuerwerk an der EWS Arena.	https://www.goeppingen.de/start/kultur/maientag.html	https://www.goeppingen.de	Stadtverwaltung Göppingen - Referat Kultur	Göppinger Maientag	73033 Göppingen	29.8.2026	Festplatz an der EWS Arena	73033-73033 Göppingen	S	2026-06-11	2026-06-15	2027-06-10	2027-06-14	2027-01-15	\N	48.7077	9.6641	8FWPMJ57+3J	ca. 40	73033	5	\N	f		\N
 Dinkelsbühl	11892	Bauhofstraße 43	ca. 35 km nordöstlich von Aalen	KDRP	mail@kinderzeche.de	L	Bedeutendes historisches Kinder- und Heimatfest (Immaterielles Kulturerbe) mit historischem Festspiel, Festumzug und Volksfestbetrieb auf dem Schießwasen.	https://www.kinderzeche.de	https://www.kinderzeche.de	Historisches Festspiel 'Die Kinderzeche' Dinkelsbühl e.V.	Dinkelsbühler Kinderzeche	91550 Dinkelsbühl	29.8.2026	Festplatz Schießwasen & Historische Altstadt	91550-91550 Dinkelsbühl	S	2026-07-17	2026-07-26	2027-07-16	2027-07-25	2027-02-15	\N	49.0689	10.3204	8FXP389C+HP	ca. 35	91550	10	\N	f		\N
-Straelen	11167	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Willebadessen	11199	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Winterberg	11201	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wipperfürth	11202	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Witten	11203	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wülfrath	11204	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wuppertal	11205	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Würselen	11206	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Xanten	11207	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Zülpich	11208	Nordrhein-Westfalen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Adenau	11209	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Altenkirchen (Westerwald)	11210	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Alzey	11211	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Andernach	11212	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Annweiler am Trifels	11213	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bacharach	11214	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Bergzabern	11215	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Breisig	11216	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Dürkheim	11217	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Ems	11218	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Hönningen	11219	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Kreuznach	11220	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Marienberg (Westerwald)	11221	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Neuenahr-Ahrweiler	11222	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bad Sobernheim	11223	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Baumholder	11224	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bendorf	11225	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bernkastel-Kues	11226	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Betzdorf	11227	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bingen am Rhein	11228	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Birkenfeld	11229	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Bitburg	11230	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Boppard	11231	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Börrstadt	11232	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Braubach	11233	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Cochem	11234	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Daaden	11235	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dahn	11236	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Dannstadt-Schauernheim	11237	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Daun	11238	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Deidesheim	11239	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rösrath	11144	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Breisig	11216	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Dürkheim	11217	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Ems	11218	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Hönningen	11219	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Kreuznach	11220	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Marienberg (Westerwald)	11221	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Neuenahr-Ahrweiler	11222	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Sobernheim	11223	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Baumholder	11224	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bendorf	11225	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bernkastel-Kues	11226	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Betzdorf	11227	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bingen am Rhein	11228	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Birkenfeld	11229	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bitburg	11230	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Boppard	11231	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Börrstadt	11232	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Diez	11241	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Edenkoben	11242	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eisenberg (Pfalz)	11243	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ellerstadt	11244	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Dierdorf	11240	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Diez	11241	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Edenkoben	11242	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Eisenberg (Pfalz)	11243	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Ellerstadt	11244	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Lenzkirch	12742	Kirchplatz 1	ca. 16 km von Löffingen	KDRP	gemeinde@lenzkirch.de	S	Herbstlicher Krämermarkt und Jahrmarkt in der Hochschwarzwaldgemeinde Lenzkirch.	https://www.lenzkirch.de	https://www.lenzkirch.de	Gemeinde Lenzkirch	Lenzkircher Michaelimarkt	79853 Lenzkirch	31.8.2026	Ortsmitte / Kurpark	79853-79853 Lenzkirch	S	2026-10-05	2026-10-05	2027-10-04	2027-10-04	2026-09-15	\N	47.8683	8.2045	8FVFV693+8R	k.A.	79853	1	\N	f		\N
-Emmelshausen	11245	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Wachenheim an der Weinstraße	11342	Rheinland-Pfalz	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Lauta	11448	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Leipzig	11450	Sachsen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
-Friedrichstadt	11662	Schleswig-Holstein	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Winterberg	11201	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Straelen	11167	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Willebadessen	11199	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wipperfürth	11202	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Witten	11203	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wülfrath	11204	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wuppertal	11205	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Würselen	11206	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Xanten	11207	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zülpich	11208	Nordrhein-Westfalen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Adenau	11209	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Altenkirchen (Westerwald)	11210	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Alzey	11211	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Andernach	11212	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Annweiler am Trifels	11213	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bacharach	11214	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Bergzabern	11215	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Braubach	11233	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Cochem	11234	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Daaden	11235	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dahn	11236	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dannstadt-Schauernheim	11237	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Daun	11238	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Deidesheim	11239	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Emmelshausen	11245	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wachenheim an der Weinstraße	11342	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lauta	11448	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Leipzig	11450	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Friedrichstadt	11662	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Kranichfeld	11765	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Lauscha	11766	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Lausnitz b. Neustadt an der Orla	11767	Thüringen	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
@@ -19697,8 +19574,133 @@ Ibbenbüren-Laggenbeck	11867	Neumarkt 39	ca. 8 km von Ibbenbüren	KDRP	kirmes@ib
 Mettingen	11868	Markt 6-8	ca. 10 km von Ibbenbüren	KDRP	post@mettingen.de	M	Traditionelle Frühjahrskirmes im verkehrsberuhigten Ortskern von Mettingen als beliebter Saisonauftakt im Tecklenburger Land.	https://www.mettingen.de	https://www.mettingen.de	Gemeinde Mettingen - Ordnungsamt	Frühjahrskirmes Mettingen	Mettingen	29.8.2026	Ortskern Mettingen	49497-Mettingen	W	2026-04-25	2026-04-27	\N	\N	\N	\N	52.3167	7.7833	9F478Q8M+M8	ca. 40	49497	\N	\N	f		\N
 Lübbecke	11879	Kreishausstraße 2-4	ca. 58 km von Ibbenbüren	KDRP	info@blasheimermarkt.de	XL	Eines der traditionsreichsten und größten Volksfeste Ostwestfalens mit ca. 300.000 Besuchern, Festzelten und Gewerbeschau.	https://www.blasheimermarkt.de	https://www.luebbecke.de	Stadt Lübbecke - Marktverwaltung	Blasheimer Markt	Lübbecke	29.8.2026	Marktgelände Blasheim an der B65	32312-Lübbecke	W	2026-09-03	2026-09-06	2027-09-02	2027-09-05	2026-10-31	\N	52.3022	8.5714	9F488H2C+VP	ca. 300	32312	\N	\N	f		\N
 Kelheim	13408	Ludwigsplatz 16	ca. 25 km von Hagelstadt	KDRP	stadt@kelheim.de	M	Niederbayerisches Sommer-Volksfest an der Donau mit traditionellem Einzug, Festzelten, Schirmbar, Volksfestlauf und Fahrgeschäften.	https://tourismus.kelheim.de/volksfest	https://www.kelheim.de	Stadt Kelheim	Kelheimer Volksfest	Kelheim	5.9.2026	Volksfestplatz Am Pflegerspitz	93309-Kelheim	S	2026-08-13	2026-08-17	2027-08-12	2027-08-16	2026-01-15	\N	48.9137	11.8797	WR7H+FV Kelheim	ca. 20	93309	5	\N	f		\N
+Engelstadt	11246	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Freinsheim	11248	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hachenburg	11253	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hillesheim	11257	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Idar-Oberstein	11261	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kallstadt	11265	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kaub	11269	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kirchheimbolanden	11272	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kyllburg	11277	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Landau in der Pfalz	11280	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ludwigshafen am Rhein	11284	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Meisenheim	11289	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mörstadt	11292	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nastätten	11297	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neustadt/ Westerwald	11301	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nierstein	11305	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oppenheim	11309	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pirmasens	11313	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ransbach-Baumbach	11317	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Rhens	11321	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Saarburg	11325	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schifferstadt	11328	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Speicher	11333	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Traben-Trarbach	11336	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Trier	11337	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Unkel	11340	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Weißenthurm	11344	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wittlich	11348	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wörth am Rhein	11352	Rheinland-Pfalz	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Blieskastel	11356	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lebach	11360	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Uelzen	11998	Herzogenplatz 2	ca. 14 km von Bad Bevensen	KDRP	info@tourismus-uelzen.de	L	Stimmungsvoller Weihnachtsmarkt mit riesigem Adventskalender am Alten Rathaus, zweistöckiger Glühweinpyramide und festlichem Kulturprogramm.	https://www.uelzener-weihnachtszauber.de	https://kts-uelzen.de	Eigenbetrieb KTS der Hansestadt Uelzen	Uelzener Weihnachtszauber	Uelzen	30.8.2026	St.-Marien-Kirchplatz & Altes Rathaus	29525-Uelzen	N	2026-11-27	2026-12-23	2027-11-26	2027-12-23	\N	\N	52.9645	10.5602	9F4FXH76+R3	k.A.	29525	27	\N	f		\N
+Ottweiler	11363	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Saarlouis	11366	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Völklingen	11370	Saarland	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Annaberg-Buchholz	11374	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Augustusburg	11377	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Belgern-Schildau	11385	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Böhlen	11389	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Burgstädt	11393	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Coswig	11396	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Delitzsch	11399	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Dresden	11404	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eibenstock	11407	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Elstra / Halštrow	11410	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Frankenberg/Sa.	11414	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Frohburg	11418	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Glashütte	11422	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Grimma	11425	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Großenhain	11428	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hainichen	11432	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Herrnhut	11436	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hoyerswerda	11439	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kamenz / Kamjenc	11442	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Klingenthal	11445	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Gottleuba-Berggießhübel	11380	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Kaarst	12066	Am Neumarkt 2	ca. 8 km von Willich	KDRP	info@kaarst-total.de	M	Großes dreitägiges Stadt- und Familienfest mit Festmeile, 3 Live-Musik-Bühnen, Fahrgeschäften und Höhenfeuerwerk.	https://www.kaarst-total.de	https://www.kaarst-total.de	Initiativkreis Kaarst Total e.V.	Kaarst Total – Stadt- & Familienfest	41564 Kaarst	30.8.2026	Am Neumarkt & Kaarster Stadtmitte	41564-41564 Kaarst	W	2026-09-04	2026-09-06	2027-09-03	2027-09-05	2026-05-31	\N	51.2281	6.6210	6JHC+6C Kaarst	ca. 50	41564	3	\N	f		\N
+Königstein/Sächs. Schw.	11447	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lichtenstein/Sa.	11453	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lommatzsch	11457	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Marienberg	11461	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Markranstädt	11464	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mügeln	11468	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Neusalza-Spremberg	11471	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Nossen	11475	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oederan	11478	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Olbernhau	11481	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pegau	11485	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Pockau-Lengefeld	11489	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Radeberg	11492	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Regis-Breitingen	11495	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Roßwein	11501	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sayda	11504	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schkeuditz	11507	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sebnitz	11512	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Stollberg/Erzgeb.	11515	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Thalheim/Erzgeb.	11519	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Trebsen/Mulde	11523	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Weißwasser/O.L. 	11528	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wilkau-Haßlau	11531	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wolkenstein	11535	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zwenkau	11539	Sachsen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Aken (Elbe)	11542	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Annaburg	11545	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Aschersleben	11549	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Schmiedeberg	11553	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bernburg (Saale)	11556	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bismark (Altmark)	11557	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Calbe (Saale)	11562	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eckartsberga	11565	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Freyburg (Unstrut)	11569	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Gommern	11573	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Güsten	11576	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Halle (Saale)	11579	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Hettstedt	11583	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Jessen (Elster)	11587	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kemberg	11590	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	8.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Köthen (Anhalt)	11593	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lützen	11598	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Merseburg	11601	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Naumburg (Saale)	11604	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Oebisfelde-Weferlingen	11608	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Osterfeld	11612	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Querfurt	11615	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Sandersdorf-Brehna	11619	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Schwanebeck	11623	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Staßfurt	11626	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Tangerhütte	11630	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wanzleben-Börde	11634	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Werben (Elbe)	11637	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Wolmirstedt	11641	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Zörbig	11645	Sachsen-Anhalt	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Bramstedt	11648	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Segeberg	11651	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Brunsbüttel	11655	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Eutin	11659	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Garding	11663	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Geesthacht	11664	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Heide	11668	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Itzehoe	11671	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Kiel	11675	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Lütjenburg	11679	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Mölln	11682	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Norderstedt	11686	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Plön	11690	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Ratzeburg	11693	Schleswig-Holstein	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
+Bad Langensalza	11720	Thüringen	\N	KDRP	\N	\N	ERLEDIGT	\N	\N	\N	\N	\N	9.10.2026	\N	\N		\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N
 Körle	14934	Im Mülmischtal 2	ca. 12 km von Spangenberg	KDRP	mail@koerle.de	M	Viertägige Kirmes mit Kirmesdisco, Schlachteessen, zünftigem Frühschoppen, Kinderkirmes und Festumzug durch das Dorf.	https://www.koerle.de	https://www.koerle.de	Kirmesteam Körle / Gemeinde Körle	Körler Kirmes	34327 Körle	10.9.2026	Berglandhalle Körle & Dorfplatz	34327-34327 Körle	M	2026-10-29	2026-11-01	2027-10-28	2027-10-31	\N	\N	51.1717	9.5115	9F255GCP+MJ	k.A.	34327	4	\N	f		\N
 Ellwangen (Jagst)	11893	Spitalstraße 4	ca. 16 km nördlich von Aalen	KDRP	tourist@ellwangen.de	M	Traditionsreicher Kaltblutmarkt und Volksfest mit großem Krämermarkt, Reitervorführungen, Festzelt und Kirmesbereich.	https://www.ellwangen.de/tourismus-kultur/feste-veranstaltungen/ellwanger-pferdemarkt	https://www.ellwangen.de	Stadtverwaltung Ellwangen - Amt für Kultur, Tourismus und Stadtmarketing	Ellwanger Pferdemarkt	73479 Ellwangen (Jagst)	29.8.2026	Schießwasen / Rundsporthalle / Innenstadt	73479-73479 Ellwangen (Jagst)	S	2026-01-09	2026-01-14	2027-01-08	2027-01-13	2026-10-31	\N	48.9616	10.1294	8FXPX46H+J7	ca. 20	73479	6	\N	f		\N
 Achern	100	Rathausplatz 1	in Achern (0 km)	KDRP	stadt@achern.de	M	Stimmungsvoller Weihnachtsmarkt im Herzen der Stadt Achern mit Kunsthandwerk, regionalen Spezialitäten und Bühnenprogramm.	https://www.achern.de	https://www.achern.de	Stadtverwaltung Achern - Fachgebiet Kultur und Stadtmarketing	Weihnachtsmarkt Achern	77855 Achern	29.8.2026	Rathausplatz & Adlerplatz	77855-77855 Achern	S	2026-11-27	2026-12-20	2027-11-26	2027-12-19	2027-08-31	\N	48.6283	8.0736	J3H7+8C Achern	k.A.	77855	24	\N	f		\N
@@ -24173,6 +24175,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_staging_nr_seq"', 1788468530735, 
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict emUUFfaQhZe33gjRRFs0cwP8sLC3xoypillD6YEEkNdyBywTT3W5t76rNlB4F2H
+-- \unrestrict SOVUSZOq97z5r8SB5jYFMerb52A2ERsiU8ruLessWDBTOk6bXF4TfJVaDX8Ueqb
 
 RESET ALL;

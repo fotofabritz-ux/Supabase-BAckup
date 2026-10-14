@@ -517,7 +517,10 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten" (
     "org_on_name" "text",
     "pl_typ" "text",
     "org_on_url" "text",
-    "is_referenced" boolean DEFAULT false NOT NULL
+    "is_referenced" boolean DEFAULT false NOT NULL,
+    "org_on_typ" "text"[] DEFAULT '{}'::"text"[] NOT NULL,
+    "org_on_intern" "text",
+    CONSTRAINT "platzdaten_org_on_typ_check" CHECK (("org_on_typ" <@ ARRAY['PDF'::"text", 'Webformular'::"text", 'SQL-Daten'::"text", 'Papier-Bewerbung'::"text", 'Email'::"text"]))
 );
 
 
@@ -617,6 +620,10 @@ COMMENT ON COLUMN "public"."platzdaten"."org_on_bew" IS 'Online-Bewerbung?';
 
 
 COMMENT ON COLUMN "public"."platzdaten"."org_on_name" IS 'Begriff, der auf der Webseite gefunden wurde';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten"."org_on_intern" IS 'Interne Vermerke für Online-Formulare';
 
 
 

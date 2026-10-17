@@ -1420,6 +1420,10 @@ CREATE UNIQUE INDEX "platzdaten_duplicate_NR_idx" ON "public"."platzdaten_duplic
 
 
 
+CREATE INDEX "platzdaten_pl_typ_idx" ON "public"."platzdaten" USING "btree" ("pl_typ");
+
+
+
 CREATE UNIQUE INDEX "platzdaten_staging_NR_idx" ON "public"."platzdaten_staging" USING "btree" ("nr");
 
 

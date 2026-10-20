@@ -45,6 +45,13 @@ CREATE EXTENSION IF NOT EXISTS "pg_stat_statements" WITH SCHEMA "extensions";
 
 
 
+CREATE EXTENSION IF NOT EXISTS "pg_trgm" WITH SCHEMA "extensions";
+
+
+
+
+
+
 CREATE EXTENSION IF NOT EXISTS "pgcrypto" WITH SCHEMA "extensions";
 
 
@@ -520,6 +527,7 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten" (
     "is_referenced" boolean DEFAULT false NOT NULL,
     "org_on_typ" "text"[] DEFAULT '{}'::"text"[] NOT NULL,
     "org_on_intern" "text",
+    "markierung" bigint,
     CONSTRAINT "platzdaten_org_on_typ_check" CHECK (("org_on_typ" <@ ARRAY['PDF'::"text", 'Webformular'::"text", 'SQL-Daten'::"text", 'Papier-Bewerbung'::"text", 'Email'::"text", 'unbek'::"text"]))
 );
 
@@ -1310,6 +1318,11 @@ ALTER TABLE ONLY "public"."geschaefte"
 
 
 
+ALTER TABLE ONLY "public"."platzdaten"
+    ADD CONSTRAINT "platzdaten_markierung_fkey" FOREIGN KEY ("markierung") REFERENCES "public"."platzdaten"("nr");
+
+
+
 ALTER TABLE ONLY "public"."profiles"
     ADD CONSTRAINT "profiles_uid_fkey" FOREIGN KEY ("uid") REFERENCES "auth"."users"("id") ON DELETE CASCADE;
 
@@ -1508,6 +1521,99 @@ GRANT USAGE ON SCHEMA "public" TO "postgres";
 GRANT USAGE ON SCHEMA "public" TO "anon";
 GRANT USAGE ON SCHEMA "public" TO "authenticated";
 GRANT USAGE ON SCHEMA "public" TO "service_role";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

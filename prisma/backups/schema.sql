@@ -701,13 +701,11 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten_staging" (
     "va_web" "text",
     "va_name" "text",
     "pl_bez" "text",
-    "XXX_pl_plz_alt" "text",
     "va_ort" "text",
     "int_check" "text",
     "pl_location" "text",
     "kal_plzort" "text",
     "kal_region" "text" NOT NULL,
-    "XXX_pl_id" "text",
     "pl_start" "date",
     "pl_ende" "date",
     "futur_start" "date",
@@ -723,15 +721,17 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten_staging" (
     "va_land" "text",
     "org_on_bew" boolean,
     "org_on_name" "text",
-    "pl_typ" "text"
+    "pl_typ" "text",
+    "org_on_url" "text",
+    "is_referenced" boolean DEFAULT false NOT NULL,
+    "org_on_typ" "text"[] DEFAULT '{}'::"text"[] NOT NULL,
+    "org_on_intern" "text",
+    "markierung" bigint,
+    CONSTRAINT "platzdaten_org_on_typ_check" CHECK (("org_on_typ" <@ ARRAY['PDF'::"text", 'Webformular'::"text", 'SQL-Daten'::"text", 'Papier-Bewerbung'::"text", 'Email'::"text", 'unbek'::"text"]))
 );
 
 
 ALTER TABLE "public"."platzdaten_staging" OWNER TO "postgres";
-
-
-COMMENT ON TABLE "public"."platzdaten_staging" IS 'This is a duplicate of platzdaten';
-
 
 
 COMMENT ON COLUMN "public"."platzdaten_staging"."pl_ort" IS 'Platz, Ort';
@@ -763,10 +763,6 @@ COMMENT ON COLUMN "public"."platzdaten_staging"."va_name" IS 'Veranstalter-Name'
 
 
 COMMENT ON COLUMN "public"."platzdaten_staging"."pl_bez" IS 'Bezeichnung des Platzes';
-
-
-
-COMMENT ON COLUMN "public"."platzdaten_staging"."XXX_pl_plz_alt" IS 'Alte Postleitzahl mit "D-"';
 
 
 
@@ -827,6 +823,10 @@ COMMENT ON COLUMN "public"."platzdaten_staging"."org_on_bew" IS 'Online-Bewerbun
 
 
 COMMENT ON COLUMN "public"."platzdaten_staging"."org_on_name" IS 'Begriff, der auf der Webseite gefunden wurde';
+
+
+
+COMMENT ON COLUMN "public"."platzdaten_staging"."org_on_intern" IS 'Interne Vermerke für Online-Formulare';
 
 
 
@@ -947,6 +947,10 @@ CREATE UNIQUE INDEX "platzdaten_staging_NR_idx" ON "public"."platzdaten_staging"
 
 
 
+CREATE INDEX "platzdaten_staging_pl_typ_idx" ON "public"."platzdaten_staging" USING "btree" ("pl_typ");
+
+
+
 CREATE OR REPLACE TRIGGER "bewerbungen_set_updated_at" BEFORE UPDATE ON "public"."bewerbungen" FOR EACH ROW EXECUTE FUNCTION "public"."set_updated_at"();
 
 
@@ -994,6 +998,11 @@ ALTER TABLE ONLY "public"."geschaefte"
 
 ALTER TABLE ONLY "public"."platzdaten"
     ADD CONSTRAINT "platzdaten_markierung_fkey" FOREIGN KEY ("markierung") REFERENCES "public"."platzdaten"("nr");
+
+
+
+ALTER TABLE ONLY "public"."platzdaten_staging"
+    ADD CONSTRAINT "platzdaten_staging_markierung_fkey" FOREIGN KEY ("markierung") REFERENCES "public"."platzdaten_staging"("nr");
 
 
 

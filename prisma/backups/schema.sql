@@ -241,7 +241,11 @@ CREATE TABLE IF NOT EXISTS "public"."stadtdaten" (
     "va_land" "text",
     "org_on_bew" boolean,
     "org_on_name" "text",
-    "org_on_url" "text"
+    "org_on_url" "text",
+    "pl_typ" "text",
+    "is_referenced" boolean DEFAULT false,
+    "org_on_typ" "text",
+    "org_on_intern" "text"
 );
 
 

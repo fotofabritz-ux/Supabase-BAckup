@@ -416,7 +416,10 @@ CREATE TABLE IF NOT EXISTS "public"."firmendaten" (
     "verbaende" "text"[],
     "lizenzdatum" "date",
     "lizenzstatus" "text",
-    "reg_gesellschafter" "text"
+    "reg_gesellschafter" "text",
+    "updates_consent" boolean DEFAULT true,
+    "gewerbesteuer" "text",
+    "bg_name" "text"
 );
 
 
@@ -851,6 +854,7 @@ CREATE TABLE IF NOT EXISTS "public"."profiles" (
     "role" "text" DEFAULT 'user'::"text",
     "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
     "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
+    "updates_consent" boolean DEFAULT true,
     CONSTRAINT "profiles_role_check" CHECK (("role" = ANY (ARRAY['user'::"text", 'admin'::"text"])))
 );
 

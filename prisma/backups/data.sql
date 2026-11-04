@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict SK63HgZIQm1xab2n7OoX6hPjE2En7i0brkEiavKhg9bMvmvKiIHBlv3AjSk3FfZ
+-- \restrict RNDrsats11htCqQvAUCzhrkJQdneeZLS7u8Pj3jIdSXPdYnL2FSTWVbpkB63EF6
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.11
@@ -873,6 +873,14 @@ COPY "auth"."webauthn_challenges" ("id", "user_id", "challenge_type", "session_d
 --
 
 COPY "auth"."webauthn_credentials" ("id", "user_id", "credential_id", "public_key", "attestation_type", "aaguid", "sign_count", "transports", "backup_eligible", "backed_up", "friendly_name", "created_at", "updated_at", "last_used_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: app_subscriptions; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."app_subscriptions" ("id", "user_id", "app_code", "stripe_subscription_id", "stripe_price_id", "status", "current_period_start", "current_period_end", "cancel_at_period_end", "created_at", "updated_at") FROM stdin;
 \.
 
 
@@ -8457,6 +8465,14 @@ d8b430d6-a9d3-4b6b-8ccd-a23ca1e45b50	45db943e-5a82-46a6-8f5c-28f33ecf3650	33d75d
 4597b345-b5c8-4d26-a805-671b523f17bb	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	651	pending	2026-08-20 14:13:22.167948+00	2026-08-20 14:14:03.158274+00
 ac35112c-f153-46fa-a078-0ee1b5b772ba	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	354	pending	2026-08-20 14:37:05.296775+00	2026-08-20 14:37:50.454641+00
 9983f4c8-654e-4cd9-9a07-a9b60758e7f3	0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	e8cc4e04-19ef-43d5-ba45-538d4702e877	769	pending	2026-08-20 14:49:18.916267+00	2026-08-20 14:49:59.436451+00
+\.
+
+
+--
+-- Data for Name: billing_customers; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."billing_customers" ("user_id", "stripe_customer_id", "created_at", "updated_at") FROM stdin;
 \.
 
 
@@ -20120,6 +20136,14 @@ Wunstorf	16071	Meerstraße 9	ca. 15 km von Neustadt am Rübenberge	UPD	info@stad
 
 
 --
+-- Data for Name: stripe_webhook_events; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY "public"."stripe_webhook_events" ("stripe_event_id", "event_type", "received_at", "processed_at", "processing_error") FROM stdin;
+\.
+
+
+--
 -- Data for Name: user_events; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -20143,6 +20167,14 @@ firmendaten	firmendaten	\N	2026-04-06 21:02:41.487366+00	2026-04-06 21:02:41.487
 
 
 --
+-- Data for Name: bucket_lifecycle_states; Type: TABLE DATA; Schema: storage; Owner: supabase_storage_admin
+--
+
+COPY "storage"."bucket_lifecycle_states" ("bucket_id", "generation", "next_run_at", "claim_id", "claim_until", "continuation", "last_started_at", "last_completed_at", "last_success_at", "last_result", "failure_count", "last_error", "updated_at") FROM stdin;
+\.
+
+
+--
 -- Data for Name: buckets_analytics; Type: TABLE DATA; Schema: storage; Owner: supabase_storage_admin
 --
 
@@ -20155,6 +20187,14 @@ COPY "storage"."buckets_analytics" ("name", "type", "format", "created_at", "upd
 --
 
 COPY "storage"."buckets_vectors" ("id", "type", "created_at", "updated_at") FROM stdin;
+\.
+
+
+--
+-- Data for Name: lifecycle_abandoned_artifacts; Type: TABLE DATA; Schema: storage; Owner: supabase_storage_admin
+--
+
+COPY "storage"."lifecycle_abandoned_artifacts" ("bucket_id", "key", "name", "version", "attempted_at") FROM stdin;
 \.
 
 
@@ -20372,6 +20412,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_staging_nr_seq"', 1788468269634, 
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict SK63HgZIQm1xab2n7OoX6hPjE2En7i0brkEiavKhg9bMvmvKiIHBlv3AjSk3FfZ
+-- \unrestrict RNDrsats11htCqQvAUCzhrkJQdneeZLS7u8Pj3jIdSXPdYnL2FSTWVbpkB63EF6
 
 RESET ALL;

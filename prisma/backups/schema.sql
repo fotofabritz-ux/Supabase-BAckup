@@ -73,6 +73,42 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA "extensions";
 
 
 
+CREATE OR REPLACE FUNCTION "public"."check_valid_token_rate_limit"("p_scope" "text", "p_token" "uuid", "p_max_requests" integer, "p_window_seconds" integer) RETURNS boolean
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+DECLARE
+  v_now timestamptz := pg_catalog.now();
+  v_window interval := pg_catalog.make_interval(secs => p_window_seconds);
+  v_bucket text := 'tok:' || p_scope || ':' || p_token::text;
+  v_count integer := 0;
+BEGIN
+  IF pg_catalog.random() < 0.05 THEN
+    DELETE FROM public.token_rate_limits
+     WHERE window_started_at < (v_now - interval '24 hours');
+  END IF;
+
+  INSERT INTO public.token_rate_limits (bucket_key, request_count, window_started_at)
+  VALUES (v_bucket, 1, v_now)
+  ON CONFLICT (bucket_key) DO UPDATE
+    SET request_count = CASE
+          WHEN public.token_rate_limits.window_started_at + v_window <= v_now THEN 1
+          ELSE public.token_rate_limits.request_count + 1
+        END,
+        window_started_at = CASE
+          WHEN public.token_rate_limits.window_started_at + v_window <= v_now THEN v_now
+          ELSE public.token_rate_limits.window_started_at
+        END
+  RETURNING request_count INTO v_count;
+
+  RETURN v_count <= p_max_requests;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."check_valid_token_rate_limit"("p_scope" "text", "p_token" "uuid", "p_max_requests" integer, "p_window_seconds" integer) OWNER TO "postgres";
+
+
 CREATE OR REPLACE FUNCTION "public"."fill_city_mutator"() RETURNS "trigger"
     LANGUAGE "plpgsql"
     AS $$
@@ -90,6 +126,82 @@ $$;
 
 
 ALTER FUNCTION "public"."fill_city_mutator"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."get_record_by_token"("p_token" "uuid") RETURNS "jsonb"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+DECLARE
+  v_record public.platzdaten%ROWTYPE;
+BEGIN
+  IF p_token IS NULL THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'valid', false,
+      'status', 'invalid',
+      'message', 'Es wurde kein gültiger Prüf-Token übergeben.'
+    );
+  END IF;
+
+  SELECT *
+    INTO v_record
+    FROM public.platzdaten
+   WHERE edit_token = p_token
+   LIMIT 1;
+
+  IF NOT FOUND THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'valid', false,
+      'status', 'invalid',
+      'message', 'Dieser Prüf-Link ist ungültig oder existiert nicht.'
+    );
+  END IF;
+
+  IF v_record.token_expires_at IS NULL OR v_record.token_expires_at <= pg_catalog.now() THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'valid', false,
+      'status', 'expired',
+      'message', 'Dieser Prüf-Link ist abgelaufen oder wurde bereits verwendet.'
+    );
+  END IF;
+
+  IF NOT public.check_valid_token_rate_limit('get', p_token, 15, 60) THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'valid', false,
+      'status', 'rate_limited',
+      'message', 'Zu viele Abrufe für diesen Link in kurzer Zeit. Bitte warten Sie einen Moment.'
+    );
+  END IF;
+
+  RETURN pg_catalog.jsonb_build_object(
+    'valid', true,
+    'status', 'ok',
+    'data', pg_catalog.jsonb_build_object(
+      'edit_token', v_record.edit_token,
+      'token_expires_at', v_record.token_expires_at,
+      'pl_bez', COALESCE(v_record.pl_bez, ''),
+      'pl_plz', COALESCE(v_record.pl_plz, ''),
+      'pl_ort', COALESCE(v_record.pl_ort, ''),
+      'pl_start', v_record.pl_start::text,
+      'pl_ende', v_record.pl_ende::text,
+      'futur_start', v_record.futur_start::text,
+      'futur_ende', v_record.futur_ende::text,
+      'futur_frist', v_record.futur_frist::text,
+      'pl_web', COALESCE(v_record.pl_web, ''),
+      'va_name', COALESCE(v_record.va_name, ''),
+      'va_adresse', COALESCE(v_record.va_adresse, ''),
+      'va_ort', COALESCE(v_record.va_ort, ''),
+      'va_web', COALESCE(v_record.va_web, ''),
+      'va_email', COALESCE(v_record.va_email, ''),
+      'org_on_bew', v_record.org_on_bew,
+      'org_on_typ', COALESCE(v_record.org_on_typ, ARRAY[]::text[])
+    )
+  );
+END;
+$$;
+
+
+ALTER FUNCTION "public"."get_record_by_token"("p_token" "uuid") OWNER TO "postgres";
 
 
 CREATE OR REPLACE FUNCTION "public"."handle_profiles_updated_at"() RETURNS "trigger"
@@ -116,6 +228,75 @@ $$;
 
 
 ALTER FUNCTION "public"."handle_updated_at"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."parse_strict_date"("p_raw" "text", "p_field_name" "text") RETURNS "date"
+    LANGUAGE "plpgsql" IMMUTABLE
+    SET "search_path" TO ''
+    AS $_$
+DECLARE
+  v_trimmed text := NULLIF(pg_catalog.btrim(COALESCE(p_raw, '')), '');
+  v_parts text[];
+  v_iso text;
+  v_parsed date;
+BEGIN
+  IF v_trimmed IS NULL THEN
+    RETURN NULL;
+  END IF;
+
+  IF v_trimmed ~ '^\d{4}-\d{2}-\d{2}$' THEN
+    BEGIN
+      v_parsed := v_trimmed::date;
+    EXCEPTION WHEN OTHERS THEN
+      RAISE EXCEPTION 'Ungültiges Kalenderdatum für %: %', p_field_name, v_trimmed;
+    END;
+
+    IF pg_catalog.to_char(v_parsed, 'YYYY-MM-DD') <> v_trimmed THEN
+      RAISE EXCEPTION 'Ungültiges Kalenderdatum für %: %', p_field_name, v_trimmed;
+    END IF;
+
+    RETURN v_parsed;
+  ELSIF v_trimmed ~ '^\d{1,2}\.\d{1,2}\.\d{4}$' THEN
+    v_parts := pg_catalog.string_to_array(v_trimmed, '.');
+    v_iso := pg_catalog.format(
+      '%s-%s-%s',
+      v_parts[3],
+      pg_catalog.lpad(v_parts[2], 2, '0'),
+      pg_catalog.lpad(v_parts[1], 2, '0')
+    );
+
+    BEGIN
+      v_parsed := v_iso::date;
+    EXCEPTION WHEN OTHERS THEN
+      RAISE EXCEPTION 'Ungültiges Kalenderdatum für %: %', p_field_name, v_trimmed;
+    END;
+
+    IF pg_catalog.to_char(v_parsed, 'YYYY-MM-DD') <> v_iso THEN
+      RAISE EXCEPTION 'Ungültiges Kalenderdatum für %: %', p_field_name, v_trimmed;
+    END IF;
+
+    RETURN v_parsed;
+  END IF;
+
+  RAISE EXCEPTION 'Ungültiges Datumsformat für %: %', p_field_name, v_trimmed;
+END;
+$_$;
+
+
+ALTER FUNCTION "public"."parse_strict_date"("p_raw" "text", "p_field_name" "text") OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."prevent_platzdaten_history_mutation"() RETURNS "trigger"
+    LANGUAGE "plpgsql"
+    SET "search_path" TO ''
+    AS $$
+BEGIN
+  RAISE EXCEPTION 'Einträge in public.platzdaten_history sind append-only (UPDATE, DELETE und TRUNCATE sind nicht zulässig).';
+END;
+$$;
+
+
+ALTER FUNCTION "public"."prevent_platzdaten_history_mutation"() OWNER TO "postgres";
 
 
 CREATE OR REPLACE FUNCTION "public"."rls_auto_enable"() RETURNS "event_trigger"
@@ -202,6 +383,242 @@ $$;
 
 
 ALTER FUNCTION "public"."set_updated_at"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."update_record_by_token"("p_token" "uuid", "p_data" "jsonb") RETURNS "jsonb"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+DECLARE
+  v_pre_expires_at timestamptz;
+  v_old_record public.platzdaten%ROWTYPE;
+  v_new_record public.platzdaten%ROWTYPE;
+  v_payload jsonb := p_data;
+  v_invalid_typ text;
+
+  v_pl_bez text;
+  v_pl_plz text;
+  v_pl_ort text;
+  v_pl_start date;
+  v_pl_ende date;
+  v_futur_start date;
+  v_futur_ende date;
+  v_futur_frist date;
+  v_pl_web text;
+  v_va_name text;
+  v_va_adresse text;
+  v_va_ort text;
+  v_va_web text;
+  v_va_email text;
+  v_org_on_bew boolean;
+  v_org_on_typ text[];
+
+  v_has_changes boolean := false;
+  v_verified_at timestamptz := pg_catalog.now();
+BEGIN
+  IF p_token IS NULL THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'invalid',
+      'message', 'Es wurde kein gültiger Prüf-Token übergeben.'
+    );
+  END IF;
+
+  IF v_payload IS NULL OR pg_catalog.jsonb_typeof(v_payload) <> 'object' THEN
+    RAISE EXCEPTION 'Ungültiger Payload für p_data: JSON-Objekt erwartet, erhalten: %',
+      COALESCE(pg_catalog.jsonb_typeof(v_payload), 'null');
+  END IF;
+
+  SELECT token_expires_at
+    INTO v_pre_expires_at
+    FROM public.platzdaten
+   WHERE edit_token = p_token
+   LIMIT 1;
+
+  IF NOT FOUND THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'invalid',
+      'message', 'Dieser Prüf-Link ist ungültig oder existiert nicht.'
+    );
+  END IF;
+
+  IF v_pre_expires_at IS NULL OR v_pre_expires_at <= pg_catalog.now() THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'expired',
+      'message', 'Dieser Prüf-Link ist abgelaufen oder wurde bereits verwendet.'
+    );
+  END IF;
+
+  IF NOT public.check_valid_token_rate_limit('update', p_token, 5, 60) THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'rate_limited',
+      'message', 'Zu viele Speicherversuche für diesen Link. Bitte warten Sie einen Moment.'
+    );
+  END IF;
+
+  SELECT *
+    INTO v_old_record
+    FROM public.platzdaten
+   WHERE edit_token = p_token
+   FOR UPDATE;
+
+  IF NOT FOUND THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'invalid',
+      'message', 'Dieser Prüf-Link ist ungültig oder existiert nicht.'
+    );
+  END IF;
+
+  IF v_old_record.token_expires_at IS NULL OR v_old_record.token_expires_at <= pg_catalog.now() THEN
+    RETURN pg_catalog.jsonb_build_object(
+      'success', false,
+      'status', 'expired',
+      'message', 'Dieser Prüf-Link ist abgelaufen oder wurde bereits verwendet.'
+    );
+  END IF;
+
+  v_pl_bez := CASE WHEN v_payload ? 'pl_bez' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'pl_bez', '')), '') ELSE v_old_record.pl_bez END;
+  v_pl_plz := CASE WHEN v_payload ? 'pl_plz' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'pl_plz', '')), '') ELSE v_old_record.pl_plz END;
+  v_pl_ort := CASE WHEN v_payload ? 'pl_ort' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'pl_ort', '')), '') ELSE v_old_record.pl_ort END;
+  v_pl_web := CASE WHEN v_payload ? 'pl_web' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'pl_web', '')), '') ELSE v_old_record.pl_web END;
+  v_va_name := CASE WHEN v_payload ? 'va_name' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'va_name', '')), '') ELSE v_old_record.va_name END;
+  v_va_adresse := CASE WHEN v_payload ? 'va_adresse' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'va_adresse', '')), '') ELSE v_old_record.va_adresse END;
+  v_va_ort := CASE WHEN v_payload ? 'va_ort' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'va_ort', '')), '') ELSE v_old_record.va_ort END;
+  v_va_web := CASE WHEN v_payload ? 'va_web' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'va_web', '')), '') ELSE v_old_record.va_web END;
+  v_va_email := CASE WHEN v_payload ? 'va_email' THEN NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'va_email', '')), '') ELSE v_old_record.va_email END;
+
+  v_pl_start := CASE WHEN v_payload ? 'pl_start' THEN public.parse_strict_date(v_payload->>'pl_start', 'pl_start') ELSE v_old_record.pl_start END;
+  v_pl_ende := CASE WHEN v_payload ? 'pl_ende' THEN public.parse_strict_date(v_payload->>'pl_ende', 'pl_ende') ELSE v_old_record.pl_ende END;
+  v_futur_start := CASE WHEN v_payload ? 'futur_start' THEN public.parse_strict_date(v_payload->>'futur_start', 'futur_start') ELSE v_old_record.futur_start END;
+  v_futur_ende := CASE WHEN v_payload ? 'futur_ende' THEN public.parse_strict_date(v_payload->>'futur_ende', 'futur_ende') ELSE v_old_record.futur_ende END;
+  v_futur_frist := CASE WHEN v_payload ? 'futur_frist' THEN public.parse_strict_date(v_payload->>'futur_frist', 'futur_frist') ELSE v_old_record.futur_frist END;
+
+  IF v_payload ? 'org_on_bew' THEN
+    IF pg_catalog.jsonb_typeof(v_payload->'org_on_bew') = 'null'
+       OR NULLIF(pg_catalog.btrim(COALESCE(v_payload->>'org_on_bew', '')), '') IS NULL THEN
+      v_org_on_bew := NULL;
+    ELSIF pg_catalog.jsonb_typeof(v_payload->'org_on_bew') = 'boolean' THEN
+      v_org_on_bew := (v_payload->>'org_on_bew')::boolean;
+    ELSIF pg_catalog.lower(v_payload->>'org_on_bew') IN ('true', '1', 'ja') THEN
+      v_org_on_bew := true;
+    ELSIF pg_catalog.lower(v_payload->>'org_on_bew') IN ('false', '0', 'nein') THEN
+      v_org_on_bew := false;
+    ELSE
+      RAISE EXCEPTION 'Ungültiger Wert für org_on_bew: %', v_payload->>'org_on_bew';
+    END IF;
+  ELSE
+    v_org_on_bew := v_old_record.org_on_bew;
+  END IF;
+
+  IF v_payload ? 'org_on_typ' THEN
+    IF pg_catalog.jsonb_typeof(v_payload->'org_on_typ') <> 'array' THEN
+      RAISE EXCEPTION 'Ungültiger Datentyp für org_on_typ: JSON-Array erwartet, erhalten: %',
+        pg_catalog.jsonb_typeof(v_payload->'org_on_typ');
+    END IF;
+
+    IF EXISTS (
+      SELECT 1
+        FROM pg_catalog.jsonb_array_elements(v_payload->'org_on_typ') AS el
+       WHERE pg_catalog.jsonb_typeof(el) <> 'string'
+    ) THEN
+      RAISE EXCEPTION 'Ungültige Elemente in org_on_typ: Nur Zeichenketten erlaubt.';
+    END IF;
+
+    SELECT elem
+      INTO v_invalid_typ
+      FROM pg_catalog.jsonb_array_elements_text(v_payload->'org_on_typ') AS elem
+     WHERE NOT (elem = ANY(ARRAY['Webformular', 'PDF', 'Email', 'SQL-Daten', 'Papier-Bewerbung']))
+     LIMIT 1;
+
+    IF v_invalid_typ IS NOT NULL THEN
+      RAISE EXCEPTION 'Unbekannter oder nicht erlaubter Wert in org_on_typ: %', v_invalid_typ;
+    END IF;
+
+    SELECT COALESCE(pg_catalog.array_agg(DISTINCT elem ORDER BY elem), ARRAY[]::text[])
+      INTO v_org_on_typ
+      FROM pg_catalog.jsonb_array_elements_text(v_payload->'org_on_typ') AS elem;
+  ELSE
+    SELECT COALESCE(pg_catalog.array_agg(DISTINCT elem ORDER BY elem), ARRAY[]::text[])
+      INTO v_org_on_typ
+      FROM pg_catalog.unnest(COALESCE(v_old_record.org_on_typ, ARRAY[]::text[])) AS elem;
+  END IF;
+
+  v_has_changes := (
+    COALESCE(NULLIF(pg_catalog.btrim(v_old_record.pl_bez), ''), '') IS DISTINCT FROM COALESCE(v_pl_bez, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.pl_plz), ''), '') IS DISTINCT FROM COALESCE(v_pl_plz, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.pl_ort), ''), '') IS DISTINCT FROM COALESCE(v_pl_ort, '')
+    OR v_old_record.pl_start IS DISTINCT FROM v_pl_start
+    OR v_old_record.pl_ende IS DISTINCT FROM v_pl_ende
+    OR v_old_record.futur_start IS DISTINCT FROM v_futur_start
+    OR v_old_record.futur_ende IS DISTINCT FROM v_futur_ende
+    OR v_old_record.futur_frist IS DISTINCT FROM v_futur_frist
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.pl_web), ''), '') IS DISTINCT FROM COALESCE(v_pl_web, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.va_name), ''), '') IS DISTINCT FROM COALESCE(v_va_name, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.va_adresse), ''), '') IS DISTINCT FROM COALESCE(v_va_adresse, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.va_ort), ''), '') IS DISTINCT FROM COALESCE(v_va_ort, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.va_web), ''), '') IS DISTINCT FROM COALESCE(v_va_web, '')
+    OR COALESCE(NULLIF(pg_catalog.btrim(v_old_record.va_email), ''), '') IS DISTINCT FROM COALESCE(v_va_email, '')
+    OR v_old_record.org_on_bew IS DISTINCT FROM v_org_on_bew
+    OR (
+      SELECT COALESCE(pg_catalog.array_agg(DISTINCT x ORDER BY x), ARRAY[]::text[])
+        FROM pg_catalog.unnest(COALESCE(v_old_record.org_on_typ, ARRAY[]::text[])) AS x
+    ) IS DISTINCT FROM COALESCE(v_org_on_typ, ARRAY[]::text[])
+  );
+
+  UPDATE public.platzdaten
+     SET pl_bez           = v_pl_bez,
+         pl_plz           = v_pl_plz,
+         pl_ort            = v_pl_ort,
+         pl_start          = v_pl_start,
+         pl_ende           = v_pl_ende,
+         futur_start       = v_futur_start,
+         futur_ende        = v_futur_ende,
+         futur_frist       = v_futur_frist,
+         pl_web            = v_pl_web,
+         va_name           = v_va_name,
+         va_adresse        = v_va_adresse,
+         va_ort            = v_va_ort,
+         va_web            = v_va_web,
+         va_email          = v_va_email,
+         org_on_bew        = v_org_on_bew,
+         org_on_typ        = v_org_on_typ,
+         verified_at       = v_verified_at,
+         token_expires_at  = v_verified_at
+   WHERE nr = v_old_record.nr
+  RETURNING * INTO v_new_record;
+
+  INSERT INTO public.platzdaten_history (
+    record_id,
+    old_data,
+    new_data,
+    changed_at,
+    change_source
+  ) VALUES (
+    v_old_record.nr,
+    pg_catalog.to_jsonb(v_old_record),
+    pg_catalog.to_jsonb(v_new_record),
+    v_verified_at,
+    CASE
+      WHEN v_has_changes THEN 'self_service_token'
+      ELSE 'self_service_verified'
+    END
+  );
+
+  RETURN pg_catalog.jsonb_build_object(
+    'success', true,
+    'status', CASE WHEN v_has_changes THEN 'updated' ELSE 'confirmed' END,
+    'changed', v_has_changes,
+    'verified_at', v_verified_at
+  );
+END;
+$$;
+
+
+ALTER FUNCTION "public"."update_record_by_token"("p_token" "uuid", "p_data" "jsonb") OWNER TO "postgres";
 
 SET default_tablespace = '';
 
@@ -568,6 +985,9 @@ CREATE TABLE IF NOT EXISTS "public"."platzdaten" (
     "org_on_typ" "text"[] DEFAULT '{}'::"text"[] NOT NULL,
     "org_on_intern" "text",
     "markierung" bigint,
+    "edit_token" "uuid" DEFAULT "gen_random_uuid"(),
+    "token_expires_at" timestamp with time zone,
+    "verified_at" timestamp with time zone,
     CONSTRAINT "platzdaten_org_on_typ_check" CHECK (("org_on_typ" <@ ARRAY['PDF'::"text", 'Webformular'::"text", 'SQL-Daten'::"text", 'Papier-Bewerbung'::"text", 'Email'::"text", 'unbek'::"text"]))
 );
 
@@ -726,6 +1146,19 @@ CREATE OR REPLACE VIEW "public"."platzdaten_alphabetisch" WITH ("security_invoke
 
 
 ALTER VIEW "public"."platzdaten_alphabetisch" OWNER TO "postgres";
+
+
+CREATE TABLE IF NOT EXISTS "public"."platzdaten_history" (
+    "id" "uuid" DEFAULT "gen_random_uuid"() NOT NULL,
+    "record_id" bigint NOT NULL,
+    "old_data" "jsonb" NOT NULL,
+    "new_data" "jsonb" NOT NULL,
+    "changed_at" timestamp with time zone DEFAULT "now"() NOT NULL,
+    "change_source" "text" DEFAULT 'self_service_token'::"text" NOT NULL
+);
+
+
+ALTER TABLE "public"."platzdaten_history" OWNER TO "postgres";
 
 
 CREATE TABLE IF NOT EXISTS "public"."platzdaten_staging" (
@@ -908,6 +1341,16 @@ CREATE TABLE IF NOT EXISTS "public"."stripe_webhook_events" (
 ALTER TABLE "public"."stripe_webhook_events" OWNER TO "postgres";
 
 
+CREATE TABLE IF NOT EXISTS "public"."token_rate_limits" (
+    "bucket_key" "text" NOT NULL,
+    "request_count" integer DEFAULT 1 NOT NULL,
+    "window_started_at" timestamp with time zone DEFAULT "now"() NOT NULL
+);
+
+
+ALTER TABLE "public"."token_rate_limits" OWNER TO "postgres";
+
+
 CREATE TABLE IF NOT EXISTS "public"."user_events" (
     "id" "uuid" DEFAULT "gen_random_uuid"() NOT NULL,
     "user_id" "uuid" NOT NULL,
@@ -970,6 +1413,16 @@ ALTER TABLE ONLY "public"."help_texts"
 
 
 ALTER TABLE ONLY "public"."platzdaten"
+    ADD CONSTRAINT "platzdaten_edit_token_key" UNIQUE ("edit_token");
+
+
+
+ALTER TABLE ONLY "public"."platzdaten_history"
+    ADD CONSTRAINT "platzdaten_history_pkey" PRIMARY KEY ("id");
+
+
+
+ALTER TABLE ONLY "public"."platzdaten"
     ADD CONSTRAINT "platzdaten_pkey" PRIMARY KEY ("nr");
 
 
@@ -986,6 +1439,11 @@ ALTER TABLE ONLY "public"."profiles"
 
 ALTER TABLE ONLY "public"."stripe_webhook_events"
     ADD CONSTRAINT "stripe_webhook_events_pkey" PRIMARY KEY ("stripe_event_id");
+
+
+
+ALTER TABLE ONLY "public"."token_rate_limits"
+    ADD CONSTRAINT "token_rate_limits_pkey" PRIMARY KEY ("bucket_key");
 
 
 
@@ -1022,6 +1480,14 @@ CREATE INDEX "bewerbungen_user_id_idx" ON "public"."bewerbungen" USING "btree" (
 
 
 
+CREATE INDEX "idx_platzdaten_history_record_id" ON "public"."platzdaten_history" USING "btree" ("record_id", "changed_at" DESC);
+
+
+
+CREATE INDEX "idx_platzdaten_unverified_email" ON "public"."platzdaten" USING "btree" ("va_email", "nr") WHERE (("verified_at" IS NULL) AND ("va_email" IS NOT NULL) AND ("btrim"("va_email") <> ''::"text"));
+
+
+
 CREATE INDEX "platzdaten_pl_typ_idx" ON "public"."platzdaten" USING "btree" ("pl_typ");
 
 
@@ -1047,6 +1513,14 @@ CREATE OR REPLACE TRIGGER "set_profiles_updated_at" BEFORE UPDATE ON "public"."p
 
 
 CREATE OR REPLACE TRIGGER "set_updated_at" BEFORE UPDATE ON "public"."geschaefte" FOR EACH ROW EXECUTE FUNCTION "public"."handle_updated_at"();
+
+
+
+CREATE OR REPLACE TRIGGER "trg_platzdaten_history_append_only" BEFORE DELETE OR UPDATE ON "public"."platzdaten_history" FOR EACH ROW EXECUTE FUNCTION "public"."prevent_platzdaten_history_mutation"();
+
+
+
+CREATE OR REPLACE TRIGGER "trg_platzdaten_history_no_truncate" BEFORE TRUNCATE ON "public"."platzdaten_history" FOR EACH STATEMENT EXECUTE FUNCTION "public"."prevent_platzdaten_history_mutation"();
 
 
 
@@ -1086,6 +1560,11 @@ ALTER TABLE ONLY "public"."firmendaten"
 
 ALTER TABLE ONLY "public"."geschaefte"
     ADD CONSTRAINT "geschaefte_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "auth"."users"("id") ON DELETE CASCADE;
+
+
+
+ALTER TABLE ONLY "public"."platzdaten_history"
+    ADD CONSTRAINT "platzdaten_history_record_id_fkey" FOREIGN KEY ("record_id") REFERENCES "public"."platzdaten"("nr") ON DELETE RESTRICT;
 
 
 
@@ -1264,6 +1743,9 @@ ALTER TABLE "public"."help_texts" ENABLE ROW LEVEL SECURITY;
 ALTER TABLE "public"."platzdaten" ENABLE ROW LEVEL SECURITY;
 
 
+ALTER TABLE "public"."platzdaten_history" ENABLE ROW LEVEL SECURITY;
+
+
 ALTER TABLE "public"."platzdaten_staging" ENABLE ROW LEVEL SECURITY;
 
 
@@ -1274,6 +1756,9 @@ ALTER TABLE "public"."stadtdaten" ENABLE ROW LEVEL SECURITY;
 
 
 ALTER TABLE "public"."stripe_webhook_events" ENABLE ROW LEVEL SECURITY;
+
+
+ALTER TABLE "public"."token_rate_limits" ENABLE ROW LEVEL SECURITY;
 
 
 ALTER TABLE "public"."user_events" ENABLE ROW LEVEL SECURITY;
@@ -1586,9 +2071,18 @@ GRANT USAGE ON SCHEMA "public" TO "service_role";
 
 
 
+REVOKE ALL ON FUNCTION "public"."check_valid_token_rate_limit"("p_scope" "text", "p_token" "uuid", "p_max_requests" integer, "p_window_seconds" integer) FROM PUBLIC;
+
+
+
 GRANT ALL ON FUNCTION "public"."fill_city_mutator"() TO "anon";
 GRANT ALL ON FUNCTION "public"."fill_city_mutator"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."fill_city_mutator"() TO "service_role";
+
+
+
+REVOKE ALL ON FUNCTION "public"."get_record_by_token"("p_token" "uuid") FROM PUBLIC;
+GRANT ALL ON FUNCTION "public"."get_record_by_token"("p_token" "uuid") TO "anon";
 
 
 
@@ -1601,6 +2095,14 @@ GRANT ALL ON FUNCTION "public"."handle_profiles_updated_at"() TO "service_role";
 GRANT ALL ON FUNCTION "public"."handle_updated_at"() TO "anon";
 GRANT ALL ON FUNCTION "public"."handle_updated_at"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."handle_updated_at"() TO "service_role";
+
+
+
+REVOKE ALL ON FUNCTION "public"."parse_strict_date"("p_raw" "text", "p_field_name" "text") FROM PUBLIC;
+
+
+
+REVOKE ALL ON FUNCTION "public"."prevent_platzdaten_history_mutation"() FROM PUBLIC;
 
 
 
@@ -1619,6 +2121,11 @@ GRANT ALL ON FUNCTION "public"."set_kal_region_from_plz"() TO "service_role";
 GRANT ALL ON FUNCTION "public"."set_updated_at"() TO "anon";
 GRANT ALL ON FUNCTION "public"."set_updated_at"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."set_updated_at"() TO "service_role";
+
+
+
+REVOKE ALL ON FUNCTION "public"."update_record_by_token"("p_token" "uuid", "p_data" "jsonb") FROM PUBLIC;
+GRANT ALL ON FUNCTION "public"."update_record_by_token"("p_token" "uuid", "p_data" "jsonb") TO "anon";
 
 
 
@@ -1709,6 +2216,10 @@ GRANT ALL ON TABLE "public"."platzdaten_alphabetisch" TO "service_role";
 
 
 
+GRANT SELECT,INSERT,REFERENCES,TRIGGER,MAINTAIN ON TABLE "public"."platzdaten_history" TO "service_role";
+
+
+
 GRANT ALL ON TABLE "public"."platzdaten_staging" TO "anon";
 GRANT ALL ON TABLE "public"."platzdaten_staging" TO "authenticated";
 GRANT ALL ON TABLE "public"."platzdaten_staging" TO "service_role";
@@ -1730,6 +2241,10 @@ GRANT ALL ON TABLE "public"."profiles" TO "service_role";
 GRANT ALL ON TABLE "public"."stripe_webhook_events" TO "anon";
 GRANT ALL ON TABLE "public"."stripe_webhook_events" TO "authenticated";
 GRANT ALL ON TABLE "public"."stripe_webhook_events" TO "service_role";
+
+
+
+GRANT ALL ON TABLE "public"."token_rate_limits" TO "service_role";
 
 
 

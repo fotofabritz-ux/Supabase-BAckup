@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict 9EJ3Y2uWxhMVxHoSnSuNDepm0DpRY2yGNb0yVUgF2LwDqOD99RHtfUj9wwMsLF2
+-- \restrict TeqAbsu6dHoewmsRv56UsTvsyCBKGTkBucwkR2zyc8OL3bhWSmsyJOWv2WIAMEL
 
 -- Dumped from database version 17.6
 -- Dumped by pg_dump version 17.12
@@ -14983,8 +14983,74 @@ Kelsterbach	14755	Mörfelder Straße 33	\N	KDRP	kulturamt@kelsterbach.de	S	Stimm
 -- Data for Name: profiles; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY "public"."profiles" ("uid", "email", "role", "created_at", "updated_at", "updates_consent") FROM stdin;
-ec4e8feb-e17b-4dc2-a861-50c93b99530e	tournee@schaustelleranfragen.de	user	2026-04-06 18:27:28.560307+00	2026-04-06 18:27:28.560307+00	t
+COPY "public"."profiles" ("uid", "email", "role", "created_at", "updated_at", "updates_consent", "subscription_status", "is_vip", "stripe_customer_id", "stripe_subscription_id") FROM stdin;
+ec4e8feb-e17b-4dc2-a861-50c93b99530e	tournee@schaustelleranfragen.de	user	2026-04-06 18:27:28.560307+00	2026-04-06 18:27:28.560307+00	t	inactive	f	\N	\N
+86237551-e5f5-4380-8773-0e621768d16c	adolf.landgrebe.jr@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+d420f513-686c-4182-bba9-87c3653c7af1	marvin.schweitzer@aol.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+0b3b1b7c-dbc9-4be2-91e0-c2326f218a7e	schneider-pirat@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+44dbc8f6-ae82-49f5-a153-ddf2514f4fda	spielpardies@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+e4f57f1d-57e0-4947-a400-af64b4e0a1ea	zammpano@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+5c1e1d43-627a-4a9b-a6d2-170f95972a98	horzaugust@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+ad3d14eb-2235-4943-aae9-5f73a3872c9e	tom1576@yahoo.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+d1215e2c-0c7c-44a9-b542-41c03e8fc62c	sidney.tusch@t-online.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+63c9863d-4a26-41be-b051-3fb368328b91	philip321.pk@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+b7f31025-0e47-43dc-867c-f78202508c00	klaus.fabritz@fotofabritz.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+84358780-7f09-42b5-9ac7-ae38a46fcbcc	heinen-agtsch@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+cf6e2620-31ae-49ca-a53c-360f11b4f02c	hortzwilli@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+ac091c3a-b64f-4601-9c7e-a7de570923c4	nussmanufaktur90@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+9f865c2c-62c6-46c9-9b86-f4932975de50	kirmeslieferdienst@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+79e00f24-1afb-4711-b8bb-4d534eff29a7	ginagloess@hotmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+d4ff4595-b596-46d8-a75b-dd8c8cc083c3	dajanagloess@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+579ad7e6-6763-4a77-a8f8-6359fc02877e	cerichugo@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+f6d79ec2-40d8-44d8-91bf-0a2df52b87cb	office@wurst-koch.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+dd8c3e8c-69ce-43bb-98f5-b0ff6269826c	bellagio.ontour@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+5cd5864a-3ae3-4703-8b12-39ecce40b518	sascha.heinen99@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+17066c93-761e-47f4-99d0-7d05ef11eb74	heikehorz@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+99e5e894-7e26-4df6-8da0-d30e3348a15b	rachelschneider12345@hotmail.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+edf3c05d-6059-4ba5-92e5-b77a55c37ff5	kueperrobert@icloud.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+45db943e-5a82-46a6-8f5c-28f33ecf3650	gilbertmarquis95@yahoo.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+10689631-5ff1-43db-8f2a-cac4140b6696	dannyreminder@yahoo.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+b4cc4a99-3c7d-471d-95a4-b0008386f741	moinmoinentenangeln@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+b0e935ad-9c91-40a2-b715-d496b719ed9d	enders-patrik@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+8350d854-a183-4841-839f-aaa4be7d08ad	fabritz@circus-circus.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+49c20d7f-9aba-491b-a7c9-ebd0a8163136	guenterwendler93@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+667ada0a-8f49-4c3b-85e7-5c34465bd3af	feixmarcelo4@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+5cd637d7-6399-4821-96f6-f25a83baa867	pocxcom@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+996c3fcb-86d0-44a8-895e-7f22303f888f	schaustellerbetrieb.rosenboom@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+8432b618-1422-41f5-a7e2-c4a7947fcfc7	y.dressen@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+2fc56678-cbc5-4579-82d3-e038ef81a90e	spielparadies@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+1c229497-cc48-4a41-8a52-d72e3480446d	sarahreinhardt1213@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+562e6f77-6c16-4793-a7c4-e8a56537b125	s.massel@aol.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+b88ccc4a-9934-40cf-8cc8-d2e535ec2ee0	liinpipikakaland@yahoo.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+ae36ede8-67a3-4986-9dbf-0b35306be171	jonaspaschenda@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+d899aa03-095a-4447-8549-2a53f04fde37	swoebbeking@gmx.net	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+00ba2681-c6a3-4c49-9e2c-9156b34fb0ba	thegreatmovierideschulz@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+1b621723-406e-45fa-86e4-a0b148cb9ebd	lillygoltz@yahoo.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+357a07bb-ade7-4dd8-a14a-d7de13beee97	jeanette.schunk@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+15aa1e2f-1c91-4eef-9487-b10e1a536554	star.cafe@myyahoo.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+6c2ce57e-bf42-4137-8548-d8d869dfa459	david.peiffer@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+7660acf6-2d71-48db-b397-f68b5dcb554d	info@kinderparadies-spies.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+2a723f57-51a6-4767-8ddb-47df6617ccb2	amerseder.brigitte@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+a60a6d86-eb00-4c23-b62e-a7e7f0b3e466	schausteller.kirschbaum@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+b70952f5-4f95-4832-ba38-1240b1ef3097	calimeru@outlook.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+bc1c7be3-eb18-4faf-b1b6-8c13d9fa1aaf	josephinemueller15@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+7c2fc1a8-31fc-4770-a4c0-08e82cc7d549	daniel-reinhardt@hotmail.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+0d265cd7-0872-498f-9c8d-8e63ccd07c63	z_weiss@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+475969c8-c086-43b1-8c67-39b99afefe8d	marvinschubert56@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+7479be9e-e84f-4dbf-8657-4f72c11bc824	schieck-europarad@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+31de4fe9-3050-4b26-a9b0-4db5eba07a0d	timlagerin7@outlook.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+c7cfdcbb-22c5-4315-92c7-84bfb7cce8cb	adriano-rasch@hotmail.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+c61267de-05b1-4dfa-a671-3d9041e292c4	sharisanis@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+4559f065-3544-4db2-a8f2-1816b83519e2	shirleyjessicalauenburger@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+abbf1809-8dca-4ca5-bf6c-1cc48d8e29e8	wilkensmandeln@web.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+82838ff9-13da-4c0d-bb43-ba834a1bc4bb	musik-express@gmx.net	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+317e85cf-2c57-4448-8a82-4ad5761e99d3	sascha.epicrideentertainment@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+ccd70fc5-8445-4b3d-b46b-673335c279f6	poolparty.weinheimer@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+5fc72bb1-95e2-4e2d-a5fc-9a9e56e00d4d	jadavanreken@icloud.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+1e5ddd9b-b1e3-4c8c-8c18-1da2c6284205	franziskaschmiester@gmail.com	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+2a7cf397-cad4-49d4-ba36-c36f1581e859	reneklugmann0511@gmx.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+2ef3a10a-ba12-4779-a799-b4e81d04651f	kf@fotofabritz.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
+05e8c445-25e6-4df8-a86d-d0f0ec7f7ad2	foto@fotofabritz.de	user	2026-11-17 11:22:17.842104+00	2026-11-17 11:22:17.842104+00	t	inactive	f	\N	\N
 \.
 
 
@@ -20178,6 +20244,6 @@ SELECT pg_catalog.setval('"public"."platzdaten_staging_nr_seq"', 1788468269634, 
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict 9EJ3Y2uWxhMVxHoSnSuNDepm0DpRY2yGNb0yVUgF2LwDqOD99RHtfUj9wwMsLF2
+-- \unrestrict TeqAbsu6dHoewmsRv56UsTvsyCBKGTkBucwkR2zyc8OL3bhWSmsyJOWv2WIAMEL
 
 RESET ALL;

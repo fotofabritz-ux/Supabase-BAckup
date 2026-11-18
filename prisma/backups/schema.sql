@@ -204,6 +204,28 @@ $$;
 ALTER FUNCTION "public"."get_record_by_token"("p_token" "uuid") OWNER TO "postgres";
 
 
+CREATE OR REPLACE FUNCTION "public"."handle_new_user"() RETURNS "trigger"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+begin
+  insert into public.profiles (uid, email, role, subscription_status, is_vip)
+  values (
+    new.id,
+    coalesce(nullif(pg_catalog.btrim(new.email), ''), new.id::text || '@no-email.local'),
+    'user',
+    'inactive',
+    false
+  )
+  on conflict (uid) do nothing;
+  return new;
+end;
+$$;
+
+
+ALTER FUNCTION "public"."handle_new_user"() OWNER TO "postgres";
+
+
 CREATE OR REPLACE FUNCTION "public"."handle_profiles_updated_at"() RETURNS "trigger"
     LANGUAGE "plpgsql"
     AS $$
@@ -297,6 +319,44 @@ $$;
 
 
 ALTER FUNCTION "public"."prevent_platzdaten_history_mutation"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."protect_profile_billing_fields"() RETURNS "trigger"
+    LANGUAGE "plpgsql" SECURITY DEFINER
+    SET "search_path" TO ''
+    AS $$
+declare
+  jwt_role text := coalesce(
+    nullif(pg_catalog.current_setting('request.jwt.claim.role', true), ''),
+    ''
+  );
+begin
+  if jwt_role in ('anon', 'authenticated') then
+    if tg_op = 'INSERT' then
+      new.role := 'user';
+      new.subscription_status := 'inactive';
+      new.is_vip := false;
+      new.stripe_customer_id := null;
+      new.stripe_subscription_id := null;
+    elsif tg_op = 'UPDATE' then
+      if new.role is distinct from old.role
+         or new.is_vip is distinct from old.is_vip
+         or new.subscription_status is distinct from old.subscription_status
+         or new.stripe_customer_id is distinct from old.stripe_customer_id
+         or new.stripe_subscription_id is distinct from old.stripe_subscription_id then
+        raise exception 'Unberechtigte Änderung von Rollen-, Abo- oder VIP-Feldern'
+          using errcode = '42501';
+      end if;
+    end if;
+  end if;
+
+  new.updated_at := pg_catalog.now();
+  return new;
+end;
+$$;
+
+
+ALTER FUNCTION "public"."protect_profile_billing_fields"() OWNER TO "postgres";
 
 
 CREATE OR REPLACE FUNCTION "public"."rls_auto_enable"() RETURNS "event_trigger"
@@ -1321,6 +1381,10 @@ CREATE TABLE IF NOT EXISTS "public"."profiles" (
     "created_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
     "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
     "updates_consent" boolean DEFAULT true,
+    "subscription_status" "text" DEFAULT 'inactive'::"text" NOT NULL,
+    "is_vip" boolean DEFAULT false NOT NULL,
+    "stripe_customer_id" "text",
+    "stripe_subscription_id" "text",
     CONSTRAINT "profiles_role_check" CHECK (("role" = ANY (ARRAY['user'::"text", 'admin'::"text"])))
 );
 
@@ -1524,6 +1588,10 @@ CREATE OR REPLACE TRIGGER "trg_platzdaten_history_no_truncate" BEFORE TRUNCATE O
 
 
 
+CREATE OR REPLACE TRIGGER "trg_protect_profile_billing_fields" BEFORE INSERT OR UPDATE ON "public"."profiles" FOR EACH ROW EXECUTE FUNCTION "public"."protect_profile_billing_fields"();
+
+
+
 CREATE OR REPLACE TRIGGER "trg_set_kal_region_from_plz" BEFORE INSERT OR UPDATE OF "pl_plz" ON "public"."platzdaten" FOR EACH ROW EXECUTE FUNCTION "public"."set_kal_region_from_plz"();
 
 
@@ -1631,6 +1699,10 @@ CREATE POLICY "Allow authenticated users to read help texts" ON "public"."help_t
 
 
 CREATE POLICY "Enable read access for all users" ON "public"."platzdaten" FOR SELECT USING (true);
+
+
+
+CREATE POLICY "Nutzer dürfen eigenes Profil lesen" ON "public"."profiles" FOR SELECT TO "authenticated" USING (("uid" = ( SELECT "auth"."uid"() AS "uid")));
 
 
 
@@ -2086,6 +2158,10 @@ GRANT ALL ON FUNCTION "public"."get_record_by_token"("p_token" "uuid") TO "anon"
 
 
 
+REVOKE ALL ON FUNCTION "public"."handle_new_user"() FROM PUBLIC;
+
+
+
 GRANT ALL ON FUNCTION "public"."handle_profiles_updated_at"() TO "anon";
 GRANT ALL ON FUNCTION "public"."handle_profiles_updated_at"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."handle_profiles_updated_at"() TO "service_role";
@@ -2103,6 +2179,10 @@ REVOKE ALL ON FUNCTION "public"."parse_strict_date"("p_raw" "text", "p_field_nam
 
 
 REVOKE ALL ON FUNCTION "public"."prevent_platzdaten_history_mutation"() FROM PUBLIC;
+
+
+
+REVOKE ALL ON FUNCTION "public"."protect_profile_billing_fields"() FROM PUBLIC;
 
 
 
